@@ -16,8 +16,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "lint-staged": {
     "*.{ts,js,json,css,md,html,svg}": [
       "prettier --write"
