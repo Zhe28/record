@@ -20,14 +20,9 @@ export default defineConfig({
 
     sidebar: {
       "/ranshu": [
-        {
-          text: "webpack常见的loader",
-          link: "/ranshu/loader",
-        },
-        {
-          text: "webpack常见的plugin",
-          link: "/ranshu/plugin",
-        },
+        { text: "webpack常见的loader", link: "/ranshu/loader" },
+        { text: "webpack常见的plugin", link: "/ranshu/plugin" },
+        { text: "提升前端构建工具的性能", link: "/ranshu/performanceImprovements" },
       ],
     },
 
@@ -40,15 +35,7 @@ export default defineConfig({
   },
   // outDir: "../dist",
   vite: {
-    build: {
-      target: "esnext",
-      emptyOutDir: true,
-      assetsInlineLimit: 409600,
-    },
-    plugins: [
-      pagefindPlugin({
-        customSearchQuery: chineseSearchOptimize,
-      }),
-    ],
+    build: { target: "esnext", emptyOutDir: true, assetsInlineLimit: 409600 },
+    plugins: [pagefindPlugin({ customSearchQuery: chineseSearchOptimize })],
   },
 });
