@@ -21,6 +21,7 @@
     "@mdit/plugin-attrs": "^0.4.8",
     "@mdit/plugin-img-lazyload": "^0.4.8",
     "@mdit/plugin-tasklist": "^0.4.8",
+    "@vitejs/plugin-vue": "^4.3.4",
     "js-yaml": "^4.1.0",
     "less": "^4.2.0",
     "vitepress-plugin-pagefind": "^0.2.9"

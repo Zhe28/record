@@ -4,7 +4,7 @@ import { tasklist } from "@mdit/plugin-tasklist";
 import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
 import { attrs } from "@mdit/plugin-attrs";
 
-const baseUrl = "";
+const baseUrl: string = "";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "我的笔记",
@@ -30,7 +30,7 @@ export default defineConfig({
       ],
     },
 
-    socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
   },
   markdown: {
     config: (md) => {

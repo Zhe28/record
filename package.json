@@ -11,15 +11,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devdependencies": {
-    "prettier": "latest",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1"
-  },
-  "dependencies": {},
   "lint-staged": {
     "*.{ts,js,json,css,md,html,svg}": [
       "prettier --write"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "prettier": "latest",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1"
   }
 }
