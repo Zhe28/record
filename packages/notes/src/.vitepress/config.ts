@@ -4,9 +4,10 @@ import { tasklist } from "@mdit/plugin-tasklist";
 import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
 import { attrs } from "@mdit/plugin-attrs";
 
-const baseUrl: string = "";
+const baseUrl: string = "/record";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: baseUrl,
   title: "我的笔记",
   description: "记录自己笔记的地方",
   head: [["link", { rel: "icon", href: baseUrl + "/learning.svg" }]],
