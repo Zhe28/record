@@ -1,7 +1,8 @@
 {
   "name": "notes",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "笔记",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev src",
@@ -12,6 +13,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "1.0.0-beta.7"
+    "@types/node": "^20.6.3",
+    "vitepress": "latest",
+    "vue": "^3.3.4"
+  },
+  "dependencies": {
+    "@mdit/plugin-attrs": "^0.4.8",
+    "@mdit/plugin-img-lazyload": "^0.4.8",
+    "@mdit/plugin-tasklist": "^0.4.8",
+    "js-yaml": "^4.1.0",
+    "less": "^4.2.0",
+    "vitepress-plugin-pagefind": "^0.2.9"
   }
 }

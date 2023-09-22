@@ -3,15 +3,15 @@
 layout: home
 
 hero:
-  name: "notes"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Notes"
+  text: "自己的笔记内容"
+  tagline: 由于所有的笔记内容都在这里，所以会有点杂乱，善用寻找哦！！
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 开始开车喽，出发
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: 座位暂时未安排好
       link: /api-examples
 
 features:
