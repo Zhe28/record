@@ -21,6 +21,7 @@ features:
   - title: 杂谈
     details: 这里是各种乱七八糟不知道怎么收录的地方
     link: others/HumanSystemOptimization
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: CSS
+    details: 这里有自己学习到 CSS 的东西
+    link: css/bfc
 ---

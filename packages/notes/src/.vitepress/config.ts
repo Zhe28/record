@@ -16,6 +16,7 @@ export default defineConfig({
     nav: [
       { text: "然叔", link: "/ranshu/loader" },
       { text: "杂谈", link: "/others/HumanSystemOptimization" },
+      { text: "CSS", link: "/css/bfc" },
     ],
 
     sidebar: {
@@ -25,6 +26,7 @@ export default defineConfig({
         { text: "提升前端构建工具的性能", link: "/ranshu/performanceImprovements" },
       ],
       "/others": [{ text: "身体系统调优不完全指南", link: "/others/HumanSystemOptimization" }],
+      CSS: [{ text: "CSS", link: "css/bfc" }],
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
