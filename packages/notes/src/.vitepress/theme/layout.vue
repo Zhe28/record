@@ -1,8 +1,6 @@
 <template>
   <Layout>
-    <template #aside-outline-before>
-      My custom sidebar top content
-    </template>
+    <template #aside-outline-before> My custom sidebar top content </template>
   </Layout>
 </template>
 
@@ -13,6 +11,4 @@ console.log(123);
 const { page, frontmatter } = useData();
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

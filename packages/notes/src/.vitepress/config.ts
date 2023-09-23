@@ -32,6 +32,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
   },
   markdown: {
+    toc: { level: [1, 2, 3, 4] },
     config: (md) => {
       md.use(imgLazyload).use(tasklist, {}).use(attrs, {});
     },

@@ -1,7 +1,6 @@
 # 提升前端构建工具性能
 
-> 来源地址: https://www.bilibili.com/video/BV1Vu4y1C73B
-> ![img.png](images/img.png)
+> 来源地址: https://www.bilibili.com/video/BV1Vu4y1C73B > ![img.png](images/img.png)
 
 ## 提升性能可以从几方面来看 .
 
