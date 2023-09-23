@@ -49,14 +49,8 @@ BFC盒子就属于是 `普通流`
 ```html
 代码如下
 <div>
-  <div
-    class="test"
-    style="height: 20px;width: 40px;margin: 20px;background-color:lightblue;"
-  ></div>
-  <div
-    class="test"
-    style="height: 20px;width: 40px;margin: 20px;background-color:lightcoral;"
-  ></div>
+  <div style="height: 20px;width: 40px;margin: 20px;background-color:lightblue;"></div>
+  <div style="height: 20px;width: 40px;margin: 20px;background-color:lightcoral;"></div>
 </div>
 ```
 
@@ -72,26 +66,15 @@ BFC盒子就属于是 `普通流`
 </div>
 </div>
 
-```html
+```html-vue
 代码如下
 <div>
-  <div style="overflow: hidden">
-    //[!code ++]
-    <div
-      class="test"
-      style="height: 20px;width: 40px;margin: 20px;background-color:blue;"
-    ></div>
-  </div>
-  //[!code ++]
-
-  <div style="overflow: hidden">
-    //[!code ++]
-    <div
-      class="test"
-      style="height: 20px;width: 40px;margin: 20px;background-color:lightcoral;"
-    ></div>
-  </div>
-  //[!code ++]
+  <div style="overflow: hidden">//[!code ++]
+    <div class="test" style="height: 20px;width: 40px;margin: 20px;background-color:blue;"></div>
+  </div>//[!code ++]
+  <div style="overflow: hidden">  //[!code ++]
+    <div class="test" style="height: 20px;width: 40px;margin: 20px;background-color:lightcoral;"></div>
+  </div>//[!code ++]
 </div>
 ```
 
