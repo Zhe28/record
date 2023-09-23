@@ -26,7 +26,7 @@ export default defineConfig({
         { text: "提升前端构建工具的性能", link: "/ranshu/performanceImprovements" },
       ],
       "/others": [{ text: "身体系统调优不完全指南", link: "/others/HumanSystemOptimization" }],
-      CSS: [{ text: "CSS", link: "css/bfc" }],
+      "/css": [{ text: "CSS 中的 BFC", link: "css/bfc" }],
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
