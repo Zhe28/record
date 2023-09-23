@@ -15,7 +15,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "然叔", link: "/ranshu/loader" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "杂谈", link: "/others/HumanSystemOptimization" },
     ],
 
     sidebar: {
@@ -24,6 +24,7 @@ export default defineConfig({
         { text: "webpack常见的plugin", link: "/ranshu/plugin" },
         { text: "提升前端构建工具的性能", link: "/ranshu/performanceImprovements" },
       ],
+      "/others": [{ text: "身体系统调优不完全指南", link: "/others/HumanSystemOptimization" }],
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],

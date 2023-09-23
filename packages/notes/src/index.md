@@ -12,14 +12,15 @@ hero:
       link: ranshu/loader.html
     - theme: alt
       text: 座位暂时未安排好
-      link: /api-examples
+#      link: /api-examples
 
 features:
   - title: 然叔
     details: 然叔面试一些需要注意的东西
-    link: ranshu/loader.html
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: ranshu/loader
+  - title: 杂谈
+    details: 这里是各种乱七八糟不知道怎么收录的地方
+    link: others/HumanSystemOptimization
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
