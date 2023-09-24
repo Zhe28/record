@@ -1,6 +1,12 @@
 # `CSS` 中的 `BFC`
 
 > 来源地址: https://www.bilibili.com/video/BV1aZ4y1M7gW
+> 来源地址: https://juejin.cn/post/6844903496970420237
+
+## 定义
+
+`BFC`( `Block formatting context` )直译为"块级格式化上下文"。它是一个独立的渲染区域，只有 `Block-level box` 参与， 它规定了内部的 `
+Block-level Box` 如何布局，并且与这个区域外部毫不相干。
 
 ## CSS 三种布局方式
 
@@ -46,14 +52,6 @@ BFC盒子就属于是 `普通流`
   <div class="test" style="height: 20px;width: 40px;margin: 20px;background-color:lightcoral;"> </div>
 </div>
 
-```html
-代码如下
-<div>
-  <div style="height: 20px;width: 40px;margin: 20px;background-color:lightblue;"></div>
-  <div style="height: 20px;width: 40px;margin: 20px;background-color:lightcoral;"></div>
-</div>
-```
-
 这是之后的形状
 
 <div>
@@ -89,17 +87,11 @@ BFC盒子就属于是 `普通流`
 TIP: 此时浮动, 父元素高度被抵消了. 因为浮动已经脱离了文档流. 所以父元素不指定高度此刻就已经没高度了. 只有设定的 `border`
 高度
 
-```html
-<div style="border: 1px black solid">
-  <div style="height: 20px;width: 40px;margin: 20px;background-color:lightblue;float: left"></div>
-</div>
-```
-
 <div style="border: 1px black solid; overflow: hidden"> 
     <div style="height: 20px;width: 40px;margin: 20px;background-color:lightblue;float: left"> </div>
 </div>
 
-此时父元素设定了 `overflow: hidden` 达到了 `BFC` 条件 . 所以, 正如前面所说的 浮动被清除了
+此时父元素设定了 `overflow: hidden` 达到了 `BFC` 条件 . 所以, 浮动元素的高度也参与了计算
 
 ```html-vue
 <div style="border: 1px black solid"> //[!code --]
@@ -117,13 +109,6 @@ TIP: 此时浮动, 父元素高度被抵消了. 因为浮动已经脱离了文�
    <div style="width: 80px; height: 80px; background-color:lightcoral;"> </div>
 </div>
 
-```html
-<div>
-  <div style="width: 40px; height: 40px; background-color:lightblue; float: left"></div>
-  <div style="width: 80px; height: 80px; background-color:lightcoral;"></div>
-</div>
-```
-
 在效果图下可以很清楚看到, 蓝色的盒子已经脱离了文档流, 浮动到了左上方.
 
 <div > 
@@ -139,4 +124,4 @@ TIP: 此时浮动, 父元素高度被抵消了. 因为浮动已经脱离了文�
 </div>
 ```
 
-在添加 `overflow:hidden` 之后, 已经浮动的盒子已经脱离了元素的左上方, 开始排列在红色盒子左边
+在添加 `overflow:hidden` 之后, 已经浮动的盒子已经脱离了元素的左上方, 开始排列在红色盒子左边.所以说 `BFC` 的区域不会与 `float box` 重叠
