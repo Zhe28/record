@@ -17,11 +17,14 @@ hero:
 features:
   - title: 然叔
     details: 然叔面试一些需要注意的东西
-    link: ranshu/loader
+    link: /ranshu/loader
   - title: 杂谈
     details: 这里是各种乱七八糟不知道怎么收录的地方
-    link: others/HumanSystemOptimization
+    link: /others/HumanSystemOptimization
   - title: CSS
     details: 这里有自己学习到 CSS 的东西
-    link: css/bfc
+    link: /css/bfc
+  - title: JavaScript
+    details: 关于 JavaScript 的内容
+    link: /javascript/eventLoop
 ---
