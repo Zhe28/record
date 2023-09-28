@@ -26,6 +26,7 @@ export default withMermaid({
         { text: "webpack常见的loader", link: "/ranshu/loader" },
         { text: "webpack常见的plugin", link: "/ranshu/plugin" },
         { text: "提升前端构建工具的性能", link: "/ranshu/performanceImprovements" },
+        { text: "浏览器缓存", link: "/ranshu/browseCache" },
       ],
       "/others": [{ text: "身体系统调优不完全指南", link: "/others/HumanSystemOptimization" }],
       "/css": [{ text: "CSS 中的 BFC", link: "/css/bfc" }],
