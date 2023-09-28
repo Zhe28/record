@@ -8,8 +8,7 @@ title: 常规流中的块状和内联布局
 
 常规流中的任何一个盒子总是某个格式区域（formatting context）中的一部分。
 
-块级盒子是在块格式区域（block formatting context）中工作的盒子，而内联盒子是在内联格式区域（inline formatting context）中工作的盒子。
-任何一个盒子总是块级盒子或内联盒子中的一种。
+块级盒子是在块格式区域（block formatting context）中工作的盒子，而内联盒子是在内联格式区域（inline formatting context）中工作的盒子。任何一个盒子总是块级盒子或内联盒子中的一种。
 
 规范中还规定了块格式区域与内联格式区域中的元素行为。
 

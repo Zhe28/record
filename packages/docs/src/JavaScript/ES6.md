@@ -263,7 +263,7 @@ let arr = [...arrayLike];
 let map = new Map([
   [1, "one"],
   [2, "two"],
-  [3, "three"],
+  [3, "three"]
 ]);
 let arr = [...map.keys()]; // [1, 2, 3]
 ```
@@ -307,7 +307,7 @@ let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
 ```js
 javascript; // NodeList对象
 let ps = document.querySelectorAll("p");
-Array.from(ps).filter((p) => {
+Array.from(ps).filter(p => {
   return p.textContent.length > 100;
 }); // arguments对象
 function foo() {
@@ -353,14 +353,14 @@ Array.from({ length: 3 }); // [ undefined, undefined, undefined ]
 对于还没有部署该方法的浏览器，可以用 `Array.prototype.slice` 方法替代。
 
 ```js
-const toArray = (() => (Array.from ? Array.from : (obj) => [].slice.call(obj)))();
+const toArray = (() => (Array.from ? Array.from : obj => [].slice.call(obj)))();
 ```
 
 Array.from 还可以接受第二个参数，作用类似于数组的 map 方法，用来对每个元素进行处理，将处理后的值放入返回的数组。
 
 ```js
-Array.from(arrayLike, (x) => x * x); // 等同于Array.from(arrayLike).map(x => x * x);
-Array.from([1, 2, 3], (x) => x * x); // [1, 4, 9]
+Array.from(arrayLike, x => x * x); // 等同于Array.from(arrayLike).map(x => x * x);
+Array.from([1, 2, 3], x => x * x); // [1, 4, 9]
 ```
 
 下面的例子是取出一组 DOM 节点的文本内容。
@@ -368,22 +368,22 @@ Array.from([1, 2, 3], (x) => x * x); // [1, 4, 9]
 ```js
 let spans = document.querySelectorAll("span.name");
 // map()
-let names1 = Array.prototype.map.call(spans, (s) => s.textContent);
+let names1 = Array.prototype.map.call(spans, s => s.textContent);
 // Array.from()
-let names2 = Array.from(spans, (s) => s.textContent);
+let names2 = Array.from(spans, s => s.textContent);
 ```
 
 下面的例子将数组中布尔值为 false 的成员转为 0 。
 
 ```js
-Array.from([1, , 2, , 3], (n) => n || 0); // [1, 0, 2, 0, 3]
+Array.from([1, , 2, , 3], n => n || 0); // [1, 0, 2, 0, 3]
 ```
 
 另一个例子是返回各种数据的类型。
 
 ```js
 function typesOf() {
-  return Array.from(arguments, (value) => typeof value);
+  return Array.from(arguments, value => typeof value);
 }
 typesOf(null, [], NaN); // ['object', 'object', 'number']
 ```
@@ -488,7 +488,7 @@ let i32a = new Int32Array([1, 2, 3, 4, 5]);i32a.copyWithin(0, 2);// Int32Array [
 数组实例的`find`方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为 true 的成员，然后返回该成员。如果没有符合条件的成员，则返回 undefined 。
 
 ```js
-[1, 4, -5, 10].find((n) => n < 0); // -5
+[1, 4, -5, 10].find(n => n < 0); // -5
 ```
 
 上面代码找出数组中第一个小于 0 的成员。
@@ -526,7 +526,7 @@ let person = { name: "John", age: 20 };
 ```js
 [NaN]
   .indexOf(NaN) // -1
-  [NaN].findIndex((y) => Object.is(NaN, y)); // 0
+  [NaN].findIndex(y => Object.is(NaN, y)); // 0
 ```
 
 上面代码中， indexOf 方法无法识别数组的 NaN 成员，但是 findIndex 方法可以借助 Object.is 方法做到。
@@ -630,7 +630,7 @@ includes 使用的是不一样的判断算法，就没有这个问题。
 const contains = (() =>
   Array.prototype.includes
     ? (arr, value) => arr.includes(value)
-    : (arr, value) => arr.some((el) => el === value))();
+    : (arr, value) => arr.some(el => el === value))();
 contains(["foo", "bar"], "baz"); // => false
 ```
 
@@ -675,14 +675,14 @@ contains(["foo", "bar"], "baz"); // => false
 
 ```js
 // 相当于 [[2, 4], [3, 6], [4, 8]].flat()
-[2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
+[2, 3, 4].flatMap(x => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
 ```
 
 flatMap() 只能展开一层数组。
 
 ```js
 // 相当于 [[[2]], [[4]], [[6]], [[8]]].flat()
-[1, 2, 3, 4].flatMap((x) => [[x * 2]]); // [[2], [4], [6], [8]]
+[1, 2, 3, 4].flatMap(x => [[x * 2]]); // [[2], [4], [6], [8]]
 ```
 
 上面代码中，遍历函数返回的是一个双层的数组，但是默认只能展开一层，因此 flatMap() 返回的还是一个嵌套数组。

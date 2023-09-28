@@ -6,13 +6,15 @@
     "docs:dev": "vitepress dev src",
     "docs:build": "vitepress build src",
     "docs:preview": "vitepress preview src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write \"**/*.{ts,js,json,css,md,html,svg,vue}\"",
+    "posttest": "npm run format"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "lint-staged": {
-    "*.{ts,js,json,css,md,html,svg}": [
+    "*.{ts,js,json,css,md,html,svg,vue}": [
       "prettier --write"
     ]
   },

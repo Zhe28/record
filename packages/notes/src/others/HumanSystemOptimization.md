@@ -1,5 +1,4 @@
-> 来源地址:
-> https://github.com/zijie0/HumanSystemOptimization
+> 来源地址: https://github.com/zijie0/HumanSystemOptimization
 
 UPDATE: 鉴于文章比较长，很多同学没有耐心读完，后续也分享录制了一个 [视频版](https://www.bilibili.com/video/BV1EW4y1R7yi/)，基本涵盖了文章里的大部分内容。
 
