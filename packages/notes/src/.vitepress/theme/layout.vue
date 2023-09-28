@@ -1,7 +1,7 @@
 <template>
-	<Layout>
-		<template #aside-outline-before> My custom sidebar top content </template>
-	</Layout>
+  <Layout>
+    <template #aside-outline-before> My custom sidebar top content </template>
+  </Layout>
 </template>
 
 <script setup lang="ts">

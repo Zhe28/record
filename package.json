@@ -7,7 +7,7 @@
     "docs:build": "vitepress build src",
     "docs:preview": "vitepress preview src",
     "prepare": "husky install",
-    "format": "prettier --write \"**/*.{ts,js,json,css,md,html,svg,vue}\"",
+    "format": "prettier --write . --config ./.prettierrc",
     "posttest": "npm run format"
   },
   "keywords": [],
