@@ -14,17 +14,17 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.6.3",
-    "mermaid": "^10.4.0",
-    "vitepress": "latest",
-    "vitepress-plugin-mermaid": "^2.0.14",
-    "vue": "^3.3.4"
+    "less": "^4.2.0",
+    "vitepress": "latest"
   },
   "dependencies": {
     "@mdit/plugin-img-lazyload": "^0.4.8",
     "@mdit/plugin-tasklist": "^0.4.8",
     "@vitejs/plugin-vue": "^4.3.4",
-    "js-yaml": "^4.1.0",
-    "less": "^4.2.0",
-    "vitepress-plugin-pagefind": "^0.2.9"
+    "vitepress-plugin-pagefind": "^0.2.9",
+    "vitepress-plugin-mermaid": "^2.0.14",
+    "vue": "^3.3.4",
+    "mermaid": "^10.4.0",
+    "js-yaml": "^4.1.0"
   }
 }
