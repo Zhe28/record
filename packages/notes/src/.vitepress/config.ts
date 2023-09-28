@@ -1,6 +1,6 @@
 import { imgLazyload } from "@mdit/plugin-img-lazyload";
 import { tasklist } from "@mdit/plugin-tasklist";
-import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
+import { pagefindPlugin } from "vitepress-plugin-pagefind";
 import { withMermaid } from "vitepress-plugin-mermaid";
 
 const baseUrl: string = "/record";
@@ -8,6 +8,7 @@ const baseUrl: string = "/record";
 export default withMermaid({
   base: baseUrl,
   title: "我的笔记",
+  lang: "zh-cn",
   description: "记录自己笔记的地方",
   head: [["link", { rel: "icon", href: baseUrl + "/learning.svg" }]],
   themeConfig: {
@@ -44,7 +45,7 @@ export default withMermaid({
   },
   // outDir: "../dist",
   vite: {
-    build: { target: "esnext", emptyOutDir: true, assetsInlineLimit: 409600 },
-    plugins: [pagefindPlugin({ customSearchQuery: chineseSearchOptimize })],
+    build: { target: "esnext", assetsInlineLimit: 409600 },
+    plugins: [pagefindPlugin()],
   },
 });
