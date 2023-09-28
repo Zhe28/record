@@ -1,8 +1,6 @@
-import { defineConfig } from "vitepress";
 import { imgLazyload } from "@mdit/plugin-img-lazyload";
 import { tasklist } from "@mdit/plugin-tasklist";
 import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
-import { attrs } from "@mdit/plugin-attrs";
 import { withMermaid } from "vitepress-plugin-mermaid";
 
 const baseUrl: string = "/record";
@@ -13,6 +11,7 @@ export default withMermaid({
   description: "记录自己笔记的地方",
   head: [["link", { rel: "icon", href: baseUrl + "/learning.svg" }]],
   themeConfig: {
+    outline: "deep",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "然叔", link: "/ranshu/loader" },
@@ -39,9 +38,8 @@ export default withMermaid({
     socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
   },
   markdown: {
-    toc: { level: [1, 2, 3, 4] },
     config: (md) => {
-      md.use(imgLazyload).use(tasklist).use(attrs);
+      md.use(imgLazyload).use(tasklist);
     },
   },
   // outDir: "../dist",
