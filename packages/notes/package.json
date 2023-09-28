@@ -14,7 +14,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.6.3",
+    "mermaid": "^10.4.0",
     "vitepress": "latest",
+    "vitepress-plugin-mermaid": "^2.0.14",
     "vue": "^3.3.4"
   },
   "dependencies": {
