@@ -1,7 +1,7 @@
 {
-  "name": "record",
-  "version": "1.0.0",
-  "description": "",
+  "name": "my-record",
+  "version": "0.1.0",
+  "description": "这是我记录自己东西的地方，自己的学习内容。",
   "scripts": {
     "docs:dev": "vitepress dev src",
     "docs:build": "vitepress build src",
@@ -19,9 +19,12 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^20.6.3",
-    "prettier": "latest",
+    "@types/node": "^20.11.8",
+    "@vuepress/plugin-git": "2.0.0-rc.1",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1"
+    "lint-staged": "^14.0.1",
+    "prettier": "latest",
+    "vitepress": "1.0.0-rc.40",
+    "vuepress": "2.0.0-rc.2"
   }
 }

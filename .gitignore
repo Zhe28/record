@@ -1,5 +1,8 @@
 cache
 temp
+.cache
+.temp
+
 dist
 
 node_modules/
