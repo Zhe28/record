@@ -3,7 +3,7 @@ import { tasklist } from "@mdit/plugin-tasklist";
 import { pagefindPlugin } from "vitepress-plugin-pagefind";
 import { withMermaid } from "vitepress-plugin-mermaid";
 
-const baseUrl: string = "/record";
+const baseUrl: string = "/notes";
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   base: baseUrl,
@@ -43,9 +43,14 @@ export default withMermaid({
       md.use(imgLazyload).use(tasklist);
     },
   },
-  // outDir: "../dist",
+  outDir: "../../../dist/notes",
   vite: {
-    build: { target: "esnext", assetsInlineLimit: 409600 },
+    build: {
+      target: "esnext",
+      emptyOutDir: true,
+      chunkSizeWarningLimit: 40960000,
+      assetsInlineLimit: 40960000,
+    },
     plugins: [pagefindPlugin()],
   },
 });
