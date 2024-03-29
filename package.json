@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "description": "这是我记录自己东西的地方，自己的学习内容。",
   "scripts": {
-    "docs:dev": "vitepress dev src",
-    "docs:build": "vitepress build src",
+    "notes:dev": "vitepress dev packages/notes/src",
+    "notes:build": "vitepress build packages/notes/src",
+    "docs:dev": "vitepress dev packages/docs/src",
+    "docs:build": "vitepress build packages/docs/src",
     "docs:preview": "vitepress preview src",
     "prepare": "husky install",
     "format": "prettier --write . --config ./.prettierrc",
@@ -19,12 +21,31 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^20.11.8",
-    "@vuepress/plugin-git": "2.0.0-rc.1",
+    "@types/node": "^20.11.30",
+    "@vuepress/plugin-git": "2.0.0-rc.21",
     "husky": "^8.0.3",
+    "less": "^4.2.0",
     "lint-staged": "^14.0.1",
     "prettier": "latest",
-    "vitepress": "1.0.0-rc.40",
-    "vuepress": "2.0.0-rc.2"
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@braintree/sanitize-url": "^7.0.1",
+    "@mdit/plugin-img-lazyload": "^0.4.8",
+    "@mdit/plugin-tasklist": "^0.4.8",
+    "@vitejs/plugin-vue": "^4.6.2",
+    "@vuepress/bundler-vite": "2.0.0-rc.9",
+    "@vuepress/theme-default": "2.0.0-rc.21",
+    "cytoscape": "^3.28.1",
+    "cytoscape-cose-bilkent": "^4.1.0",
+    "dayjs": "^1.11.10",
+    "debug": "^4.3.4",
+    "js-yaml": "^4.1.0",
+    "mermaid": "^10.9.0",
+    "vitepress": "latest",
+    "vitepress-plugin-mermaid": "^2.0.16",
+    "vitepress-plugin-pagefind": "^0.2.14",
+    "vue": "^3.4.21",
+    "vuepress": "2.0.0-rc.9"
   }
 }
