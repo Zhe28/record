@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "这是我记录自己东西的地方，自己的学习内容。",
   "workspaces": [
-    "packages/*"
+    "packages/notes",
+    "packages/docs"
   ],
+  "type": "module",
   "scripts": {
-    "notes:dev": "vitepress dev packages/notes/src",
+    "notes:dev": "vitepress dev packages",
     "notes:build": "vitepress build packages/notes/src",
     "docs:dev": "vitepress dev packages/docs/src",
     "docs:build": "vitepress build packages/docs/src",

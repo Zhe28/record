@@ -1,2 +1,3 @@
 packages:
-  - "packages/*"
+  - "packages/notes"
+  - "packages/docs"
