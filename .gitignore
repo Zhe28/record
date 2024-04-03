@@ -14,4 +14,6 @@ Thumbs.db
 *.sublime-workspace
 *.log
 yarn.lock
+pnpm-lock.yaml
+bun.lockb
 package-lock.json
