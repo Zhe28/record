@@ -8,6 +8,10 @@ on:
       - page
 jobs:
   build:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,6 +34,8 @@ jobs:
         run: bun i
       - name: Build page
         run: bun notes:build
+      - name: configure pages
+        uses: actions/configure-pages@v4
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
