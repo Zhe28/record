@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: bun i
       - name: Build page
-        run: bun build
+        run: bun run build
       - uses: actions/configure-pages@v4
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
