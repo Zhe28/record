@@ -2,15 +2,15 @@ import { imgLazyload } from "@mdit/plugin-img-lazyload";
 import { tasklist } from "@mdit/plugin-tasklist";
 import { pagefindPlugin } from "vitepress-plugin-pagefind";
 import { withMermaid } from "vitepress-plugin-mermaid";
+import { name as base } from "../../package.json";
 
-const baseUrl: string = "/record";
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
-  base: baseUrl,
+  base: `/${base}`,
   title: "我的笔记",
   lang: "zh-cn",
   description: "记录自己笔记的地方",
-  head: [["link", { rel: "icon", href: baseUrl + "/learning.svg" }]],
+  head: [["link", { rel: "icon", href: base + "/learning.svg" }]],
   rewrites: {},
   // 开启 clearUrls 功能，将 /notes/src/index.html 重写为 /notes/index.html
   cleanUrls: true,

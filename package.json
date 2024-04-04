@@ -1,6 +1,6 @@
 {
-  "name": "my-record",
-  "version": "0.1.0",
+  "name": "record",
+  "version": "0.1.1",
   "description": "这是我记录自己东西的地方，自己的学习内容。",
   "workspaces": [
     "packages/notes",
@@ -44,10 +44,9 @@
     "cytoscape": "^3.28.1",
     "cytoscape-cose-bilkent": "^4.1.0",
     "dayjs": "^1.11.10",
-    "debug": "^4.3.4",
     "js-yaml": "^4.1.0",
     "mermaid": "^10.9.0",
-    "vitepress": "latest",
+    "vitepress": "^1.0.2",
     "vitepress-plugin-mermaid": "^2.0.16",
     "vitepress-plugin-pagefind": "^0.2.14",
     "vue": "^3.4.21",
