@@ -3,7 +3,7 @@ import { tasklist } from "@mdit/plugin-tasklist";
 import { pagefindPlugin } from "vitepress-plugin-pagefind";
 import { withMermaid } from "vitepress-plugin-mermaid";
 
-const baseUrl: string = "";
+const baseUrl: string = "/record";
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   base: baseUrl,
