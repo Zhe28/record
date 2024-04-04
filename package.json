@@ -1,6 +1,6 @@
 {
   "name": "record",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "这是我记录自己东西的地方，自己的学习内容。",
   "workspaces": [
     "packages/notes",
@@ -8,11 +8,9 @@
   ],
   "type": "module",
   "scripts": {
-    "notes:dev": "vitepress dev packages",
-    "notes:build": "vitepress build packages",
-    "docs:dev": "vitepress dev packages/docs/src",
-    "docs:build": "vitepress build packages/docs/src",
-    "docs:preview": "vitepress preview src",
+    "dev": "vitepress dev packages",
+    "build": "vitepress build packages",
+    "docs:preview": "vitepress preview packages",
     "prepare": "husky install",
     "format": "prettier --write . --config ./.prettierrc",
     "posttest": "npm run format"
@@ -31,6 +29,7 @@
     "husky": "^8.0.3",
     "less": "^4.2.0",
     "lint-staged": "^14.0.1",
+    "pagefind": "^1.1.0",
     "prettier": "latest",
     "typescript": "^5.4.3"
   },
