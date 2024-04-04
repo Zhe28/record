@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "notes:dev": "vitepress dev packages",
-    "notes:build": "vitepress build packages/notes/src",
+    "notes:build": "vitepress build packages",
     "docs:dev": "vitepress dev packages/docs/src",
     "docs:build": "vitepress build packages/docs/src",
     "docs:preview": "vitepress preview src",

@@ -1,0 +1,29 @@
+name: Node.js CI
+on:
+  push:
+    branches:
+      - page
+  pull_request:
+    branches:
+      - page
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 20.x
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run notes:build
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: packages/.vitepress/dist
+      - name: Deploy page
+        uses: actions/deploy-pages@v4
