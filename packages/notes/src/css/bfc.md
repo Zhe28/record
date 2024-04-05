@@ -1,8 +1,8 @@
 # `CSS` 中的 `BFC`
 
-> 来源地址: https://www.bilibili.com/video/BV1aZ4y1M7gW
+> reference: https://www.bilibili.com/video/BV1aZ4y1M7gW
 
-> 来源地址: https://juejin.cn/post/6844903496970420237
+> reference: https://juejin.cn/post/6844903496970420237
 
 ## 定义
 

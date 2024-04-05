@@ -1,6 +1,6 @@
 # 浏览器缓存
 
-> https://www.cnblogs.com/ranyonsue/p/8918908.html
+> reference: https://www.cnblogs.com/ranyonsue/p/8918908.html
 
 Web 缓存大致可以分为：数据库缓存、服务器端缓存（代理服务器缓存、CDN 缓存）、浏览器缓存。
 

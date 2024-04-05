@@ -2,7 +2,7 @@
 
 ## 防抖 Debounce
 
-> 来源: https://juejin.cn/post/7057135245513981989
+> reference: https://juejin.cn/post/7057135245513981989
 
 主要流程也不是太复杂，由于 js 函数 setTimeout 在执行前未执行的话能够被主动取消，这是执行的关键。
 
@@ -74,7 +74,11 @@ graph LR
 
 ```typescript
 // ./debounce.ts
-let timer: { fn: null | Function; delay: number; registerTime: number } = {
+let timer: {
+  fn: null | Function;
+  delay: number;
+  registerTime: number;
+} = {
   fn: null,
   delay: 0,
   registerTime: 0
@@ -158,7 +162,11 @@ graph LR
 
 ```typescript
 // ./throttle.ts
-let timer: { fn: null | Function; delay: number; registerTime: number } = {
+let timer: {
+  fn: null | Function;
+  delay: number;
+  registerTime: number;
+} = {
   fn: null,
   delay: 0,
   registerTime: 0

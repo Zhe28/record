@@ -9,22 +9,22 @@ hero:
   actions:
     - theme: brand
       text: 开始开车喽，出发
-      link: ranshu/loader.html
+      link: optimizePerformance/loader.html
     - theme: alt
       text: 座位暂时未安排好
 #      link: /api-examples
 
 features:
-  - title: 然叔
-    details: 然叔面试一些需要注意的东西
-    link: ./ranshu/loader
-  - title: 杂谈
-    details: 这里是各种乱七八糟不知道怎么收录的地方
-    link: ./others/HumanSystemOptimization
+  - title: 性能优化
+    details: 前端性能优化相关内容
+    link: ./optimizePerformance/browseCache
   - title: CSS
-    details: 这里有自己学习到 CSS 的东西
+    details: CSS样式需要注意内容和收集一些样式
     link: ./css/bfc
   - title: JavaScript
     details: 关于 JavaScript 的内容
     link: ./javascript/eventLoop
+  - title: 杂谈
+    details: 这里是各种乱七八糟不知道怎么收录的地方
+    link: ./others/HumanSystemOptimization
 ---
