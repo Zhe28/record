@@ -1,4 +1,3 @@
-import { imgLazyload } from "@mdit/plugin-img-lazyload";
 import { tasklist } from "@mdit/plugin-tasklist";
 import { pagefindPlugin } from "vitepress-plugin-pagefind";
 import { withMermaid } from "vitepress-plugin-mermaid";
@@ -49,7 +48,10 @@ export default withMermaid({
   },
   markdown: {
     config: (md) => {
-      md.use(imgLazyload).use(tasklist);
+      md.use(tasklist);
+    },
+    image: {
+      lazyLoading: true,
     },
   },
   // outDir: "../../../dist/notes",

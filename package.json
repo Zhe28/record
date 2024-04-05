@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "@braintree/sanitize-url": "^7.0.1",
-    "@mdit/plugin-img-lazyload": "^0.4.8",
     "@mdit/plugin-tasklist": "^0.4.8",
     "@vitejs/plugin-vue": "^4.6.2",
     "@vuepress/bundler-vite": "2.0.0-rc.9",
