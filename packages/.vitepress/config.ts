@@ -34,6 +34,7 @@ export default withMermaid({
       "/notes/src/javascript": [
         { text: "并发模型和事件循环", link: "./eventLoop" },
         { text: "防抖和节流", link: "./debounceAndThrottle" },
+        { text: "JS隐形类型转换", link: "./implicitTypeConversion" },
       ],
       "/notes/src/webpack": [
         { text: "webpack常见的loader", link: "./loader" },
