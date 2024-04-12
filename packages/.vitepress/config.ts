@@ -50,6 +50,7 @@ export default withMermaid({
   markdown: {
     config: (md) => {
       md.use(tasklist);
+      // .use(excalidraw);
     },
     image: {
       lazyLoading: true,
