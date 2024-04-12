@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "lint-staged": {
-    "*.{ts,js,json,css,md,html,vue}": [
+    "*.{ts,js,json,css,html,vue}": [
       "prettier --write"
     ]
   },
