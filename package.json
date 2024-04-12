@@ -1,6 +1,6 @@
 {
   "name": "record",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "description": "这是我记录自己东西的地方，自己的学习内容。",
   "workspaces": [
     "packages/notes",
