@@ -26,9 +26,9 @@ use yarn to isntall --> yarn
 ## build
 
 ```bash
-use bunjs to build --> bun i
-use npm to build --> npm i
-use pnpm to build --> pnpm i
+use bunjs to build --> bun build
+use npm to build --> npm run build
+use pnpm to build --> pnpm build
 use yarn to build --> yarn build
 ```
 
