@@ -64,10 +64,10 @@ BFC盒子就属于是 `普通流`
 ```html-vue
 代码如下
 <div>
-  <div style="overflow: hidden">//[!code ++]
+  <div style="overflow: hidden">// [!code ++]
     <div class="test" style="height: 20px;width: 40px;margin: 20px;background-color:blue;"></div>
   </div>//[!code ++]
-  <div style="overflow: hidden">  //[!code ++]
+  <div style="overflow: hidden">  // [!code ++]
     <div class="test" style="height: 20px;width: 40px;margin: 20px;background-color:lightcoral;"></div>
   </div>//[!code ++]
 </div>
@@ -90,8 +90,8 @@ TIP: 此时浮动, 父元素高度被抵消了. 因为浮动已经脱离了文�
 此时父元素设定了 `overflow: hidden` 达到了 `BFC` 条件 . 所以, 浮动元素的高度也参与了计算
 
 ```html-vue
-<div style="border: 1px black solid"> //[!code --]
-<div style="border: 1px black solid; overflow: hidden"> //[!code ++]
+<div style="border: 1px black solid"> // [!code --]
+<div style="border: 1px black solid; overflow: hidden"> // [!code ++]
       <div style="height: 20px;width: 40px;margin: 20px;background-color:lightblue;float: left"></div>
 </div>
 ```
@@ -115,7 +115,7 @@ TIP: 此时浮动, 父元素高度被抵消了. 因为浮动已经脱离了文�
 ```html-vue
 <div >
    <div style="width: 40px; height: 40px; background-color:lightblue; float: left"> </div>
-   <div style="width: 80px; height: 80px; background-color:lightcoral;"> </div> //[!code --]
+   <div style="width: 80px; height: 80px; background-color:lightcoral;"> </div> // [!code --]
    <div style="width: 80px; height: 80px; background-color:lightcoral;overflow: hidden"> </div> // [!code ++]
 </div>
 ```
