@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始开车喽，出发
-      link: optimizePerformance/loader.html
+      link: ./javascript/eventLoop
     - theme: alt
       text: 座位暂时未安排好
 #      link: /api-examples

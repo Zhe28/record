@@ -1,5 +1,5 @@
 import { tasklist } from "@mdit/plugin-tasklist";
-import { pagefindPlugin } from "vitepress-plugin-pagefind";
+import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { name as _base } from "../../package.json";
 
@@ -16,8 +16,10 @@ export default withMermaid({
   },
   // 开启 clearUrls 功能，将 /notes/src/index.html 重写为 /notes/index.html
   cleanUrls: true,
+  lastUpdated: true,
   themeConfig: {
     outline: "deep",
+    externalLinkIcon: true,
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "笔记", link: "/notes/src/" },
@@ -69,6 +71,11 @@ export default withMermaid({
       chunkSizeWarningLimit: 40960000,
       assetsInlineLimit: 40960000,
     },
-    plugins: [pagefindPlugin()],
+    plugins: [
+      pagefindPlugin({
+        customSearchQuery: chineseSearchOptimize,
+        resultOptimization: false,
+      }),
+    ],
   },
 });
