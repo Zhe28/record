@@ -24,6 +24,9 @@ features:
   - title: JavaScript
     details: 关于 JavaScript 的内容
     link: ./javascript/eventLoop
+  - title: Vue设计与实现
+    details: Vue设计与实现笔记，代码仓库链接 https://github.com/Zhe28/vue-design
+    link: ./vueDesign/reactivitySystem
   - title: 杂谈
     details: 这里是各种乱七八糟不知道怎么收录的地方
     link: ./others/HumanSystemOptimization

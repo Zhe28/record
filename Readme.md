@@ -29,7 +29,7 @@ use yarn to isntall --> yarn
 use bunjs to build --> bun i
 use npm to build --> npm i
 use pnpm to build --> pnpm i
-use yarn to build --> yarn
+use yarn to build --> yarn build
 ```
 
 ## Author

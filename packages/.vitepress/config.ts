@@ -43,6 +43,11 @@ export default withMermaid({
           link: "./plugin",
         },
       ],
+      "/notes/src/vueDesign": [
+        { text: "一个简单的响应式系统", link: "./reactivitySystem" },
+        { text: "分支切换和cleanup", link: "./switchBranchAndCleanup" },
+        { text: "嵌套的 effect", link: "./nestedEffect" },
+      ],
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
