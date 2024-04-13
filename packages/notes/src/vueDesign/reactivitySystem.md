@@ -14,6 +14,10 @@ effect 函数的作用：
 
 促进函数的执行，在函数执行的过程中碰到 Proxy 代理过的对象，然后对象与函数绑定
 
+```typescript
+type effect = () => any;
+```
+
 由于响应式变量变动引发函数重加载，
 所以要关联响应式变量到相对应的函数，大体结构如这个图所示
 ![bucket](./images/bucket.png)
