@@ -55,6 +55,7 @@ export default withMermaid({
             { text: "4.5 嵌套的 effect", link: "./nestedEffect" },
             { text: "4.6 避免无限递归循环", link: "./avoidInfiniteRecursion" },
             { text: "4.7 调度执行", link: "./scheduler" },
+            { text: "4.8 computed和lazy", link: "./computedAndLazy" },
           ],
         },
       ],
