@@ -46,9 +46,15 @@ export default withMermaid({
         },
       ],
       "/notes/src/vueDesign": [
-        { text: "一个简单的响应式系统", link: "./reactivitySystem" },
-        { text: "分支切换和cleanup", link: "./switchBranchAndCleanup" },
-        { text: "嵌套的 effect", link: "./nestedEffect" },
+        {
+          text: "响应系统",
+          collapsed: false,
+          items: [
+            { text: "一个简单的响应式系统", link: "./reactivitySystem" },
+            { text: "分支切换和cleanup", link: "./switchBranchAndCleanup" },
+            { text: "嵌套的 effect", link: "./nestedEffect" },
+          ],
+        },
       ],
     },
 
