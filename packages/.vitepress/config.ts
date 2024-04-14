@@ -28,34 +28,41 @@ export default withMermaid({
 
     sidebar: {
       "/notes/src/optimizePerformance": [
-        { text: "提升前端构建工具的性能", link: "./performanceImprovements" },
-        { text: "浏览器缓存", link: "./browseCache" },
+        {
+          text: "提升前端构建工具的性能",
+          link: "/notes/src/optimizePerformance/performanceImprovements",
+        },
+        { text: "浏览器缓存", link: "/notes/src/optimizePerformance/browseCache" },
       ],
-      "/notes/src/others": [{ text: "身体系统调优不完全指南", link: "./HumanSystemOptimization" }],
+      "/notes/src/others": [
+        { text: "身体系统调优不完全指南", link: "/notes/src/others/HumanSystemOptimization" },
+      ],
       "/notes/src/css": [{ text: "CSS 中的 BFC", link: "/notes/src/css/bfc" }],
       "/notes/src/javascript": [
-        { text: "并发模型和事件循环", link: "./eventLoop" },
-        { text: "防抖和节流", link: "./debounceAndThrottle" },
-        { text: "JS隐形类型转换", link: "./implicitTypeConversion" },
+        { text: "并发模型和事件循环", link: "/notes/src/javascript/eventLoop" },
+        { text: "防抖和节流", link: "/notes/src/javascript/debounceAndThrottle" },
+        { text: "JS隐形类型转换", link: "/notes/src/javascript/implicitTypeConversion" },
+        {
+          text: "tcp 协议",
+          collapsed: false,
+          items: [{ text: "websocket", link: "/notes/src/javascript/protocol/websocket" }],
+        },
       ],
       "/notes/src/webpack": [
-        { text: "webpack常见的loader", link: "./loader" },
-        {
-          text: "webpack常见的plugin",
-          link: "./plugin",
-        },
+        { text: "webpack常见的loader", link: "/notes/src/webpack/loader" },
+        { text: "webpack常见的plugin", link: "/notes/src/webpack/plugin" },
       ],
       "/notes/src/vueDesign": [
         {
           text: "第四章 响应系统",
           collapsed: false,
           items: [
-            { text: "4.3 一个简单的响应式系统", link: "./reactivitySystem" },
-            { text: "4.4 分支切换和cleanup", link: "./switchBranchAndCleanup" },
-            { text: "4.5 嵌套的 effect", link: "./nestedEffect" },
-            { text: "4.6 避免无限递归循环", link: "./avoidInfiniteRecursion" },
-            { text: "4.7 调度执行", link: "./scheduler" },
-            { text: "4.8 computed和lazy", link: "./computedAndLazy" },
+            { text: "4.3 一个简单的响应式系统", link: "/notes/src/vueDesign/reactivitySystem" },
+            { text: "4.4 分支切换和cleanup", link: "/notes/src/vueDesign/switchBranchAndCleanup" },
+            { text: "4.5 嵌套的 effect", link: "/notes/src/vueDesign/nestedEffect" },
+            { text: "4.6 避免无限递归循环", link: "/notes/src/vueDesign/avoidInfiniteRecursion" },
+            { text: "4.7 调度执行", link: "/notes/src/vueDesign/scheduler" },
+            { text: "4.8 computed和lazy", link: "/notes/src/vueDesign/computedAndLazy" },
           ],
         },
       ],
