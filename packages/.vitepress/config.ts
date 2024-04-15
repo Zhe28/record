@@ -70,6 +70,11 @@ export default withMermaid({
             },
           ],
         },
+        {
+          text: "第五章 非原始值的相应方案",
+          collapsed: false,
+          items: [{ text: "5.3 代理 Object", link: "/notes/src/vueDesign/proxyObject" }],
+        },
       ],
     },
 
