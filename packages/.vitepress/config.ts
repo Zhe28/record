@@ -64,6 +64,10 @@ export default withMermaid({
             { text: "4.7 调度执行", link: "/notes/src/vueDesign/scheduler" },
             { text: "4.8 computed和lazy", link: "/notes/src/vueDesign/computedAndLazy" },
             { text: "4.9 watch 的实现原理", link: "/notes/src/vueDesign/watch" },
+            {
+              text: "4.10 立即执行的 watch 函数和回调时机",
+              link: "/notes/src/vueDesign/watchEffect",
+            },
           ],
         },
       ],
