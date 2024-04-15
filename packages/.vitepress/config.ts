@@ -63,6 +63,7 @@ export default withMermaid({
             { text: "4.6 避免无限递归循环", link: "/notes/src/vueDesign/avoidInfiniteRecursion" },
             { text: "4.7 调度执行", link: "/notes/src/vueDesign/scheduler" },
             { text: "4.8 computed和lazy", link: "/notes/src/vueDesign/computedAndLazy" },
+            { text: "4.9 watch 的实现原理", link: "/notes/src/vueDesign/watch" },
           ],
         },
       ],
