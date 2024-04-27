@@ -37,7 +37,13 @@ export default withMermaid({
       "/notes/src/others": [
         { text: "身体系统调优不完全指南", link: "/notes/src/others/HumanSystemOptimization" },
       ],
-      "/notes/src/css": [{ text: "CSS 中的 BFC", link: "/notes/src/css/bfc" }],
+      "/notes/src/css": [
+        { text: "CSS 中的 BFC", link: "/notes/src/css/bfc" },
+        {
+          text: "CSS 布局",
+          items: [{ text: "Flexbox 布局", link: "/notes/src/css/flexbox" }],
+        },
+      ],
       "/notes/src/javascript": [
         { text: "并发模型和事件循环", link: "/notes/src/javascript/eventLoop" },
         { text: "防抖和节流", link: "/notes/src/javascript/debounceAndThrottle" },
