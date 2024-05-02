@@ -36,6 +36,7 @@ export default withMermaid({
       ],
       "/notes/src/others": [
         { text: "身体系统调优不完全指南", link: "/notes/src/others/HumanSystemOptimization" },
+        { text: "git fetch 和 git pull 区别", link: "/notes/src/others/gitFetchAndPull" },
       ],
       "/notes/src/css": [
         { text: "CSS 中的 BFC", link: "/notes/src/css/bfc" },
@@ -52,6 +53,11 @@ export default withMermaid({
           text: "tcp 协议",
           collapsed: false,
           items: [{ text: "websocket", link: "/notes/src/javascript/protocol/websocket" }],
+        },
+        {
+          text: "常用的操作",
+          collapsed: false,
+          items: [{ text: "常用工具库", link: "/notes/src/javascript/utils" }],
         },
       ],
       "/notes/src/webpack": [
