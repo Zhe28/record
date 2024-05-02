@@ -85,10 +85,6 @@ function getFileLastModified(file: File): number {
 ## 代码深拷贝
 
 ```typescript
-function deepClone<T>(obj: T, set = new Set()): T {
-
-}
-
 function deepClone(value, seen = new Set<any>()) {
   if (typeof value !== 'object' || seen.has(value)) {
     return;
@@ -110,5 +106,4 @@ function deepClone(value, seen = new Set<any>()) {
   }
   return value;
 }
-
 ```
