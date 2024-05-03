@@ -116,4 +116,7 @@ export default withMermaid({
       }),
     ],
   },
+  sitemap: {
+    hostname: "https://zhe28.github.io/record/",
+  },
 });
