@@ -27,7 +27,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 如果你选择了 row 或者 row-reverse，你的主轴将沿着行向延伸。
 
-![flexbox-row-x](./images//flexboxRowX.png)
+![flexbox-row-x](./images/flexboxRowX.png)
 
 选择 column 或者 column-reverse 时，你的主轴会沿着页面的上下方向延伸——也就是块向。
 
@@ -115,9 +115,12 @@ align-items 属性可以使元素在交叉轴方向对齐。
 - center：元素向交叉轴中点对齐。
 - baseline：元素的第一行文字的基线对齐。
 - stretch（默认值）：如果项目未设置高度或设为 auto，将占满整个容器的高度。
+- space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+- space-between：项目与项目的间隔相等，项目与边框之间没有间隔。
+- space-evenly：项目与项目的间隔相等，项目与边框之间也是同样长度的间隔。
 
 ### justify-content
 
 justify-content 属性可以使元素在主轴方向对齐。
 
-- flex-start：元素向主轴起点对齐。
+- 在属性方面基本同上。
