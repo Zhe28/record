@@ -2,6 +2,8 @@ import { tasklist } from "@mdit/plugin-tasklist";
 import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { name as _base } from "../../package.json";
+import { text } from "stream/consumers";
+import { link } from "fs";
 
 const base = `/${_base}/`;
 // https://vitepress.dev/reference/site-config
@@ -33,6 +35,7 @@ export default withMermaid({
           link: "/notes/src/optimizePerformance/performanceImprovements",
         },
         { text: "浏览器缓存", link: "/notes/src/optimizePerformance/browseCache" },
+        { text: "减少网页卡顿", link: "/notes/src/optimizePerformance/task" },
       ],
       "/notes/src/others": [
         { text: "身体系统调优不完全指南", link: "/notes/src/others/HumanSystemOptimization" },
