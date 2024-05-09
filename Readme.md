@@ -10,7 +10,7 @@
 
 > 这是我记录自己东西的地方，自己的学习内容。
 
-### 🏠 [Homepage](https://github.io/Zhe28)
+### 🏠 [Homepage](https://github.com/Zhe28)
 
 ### ✨ [Demo](https://zhe28.github.io/record/)
 
@@ -43,5 +43,3 @@ use yarn to build --> yarn build
 Give a ⭐️ if this project helped you!
 
 ---
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
