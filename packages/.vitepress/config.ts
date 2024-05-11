@@ -3,8 +3,7 @@ import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { name as _base } from "../../package.json";
 
-// const base = `/${_base}/`;
-const base = `/`;
+const base = `/${_base}/`;
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
