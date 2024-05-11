@@ -8,6 +8,8 @@ export default {
     watch(router.route, () => {
       if (router.route.path === "/record/") {
         router.go("/record/notes/src/");
+      } else if (router.route.path === "/") {
+        router.go("/notes/src/");
       }
     });
   },
