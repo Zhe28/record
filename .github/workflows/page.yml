@@ -2,10 +2,10 @@ name: Node.js CI
 on:
   push:
     branches:
-      - page
+      - main
   pull_request:
     branches:
-      - page
+      - main
 jobs:
   build:
     permissions:
