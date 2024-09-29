@@ -41,6 +41,7 @@ export default withMermaid({
       "/notes/src/others": [
         { text: "身体系统调优不完全指南", link: "/notes/src/others/HumanSystemOptimization" },
         { text: "git fetch 和 git pull 区别", link: "/notes/src/others/gitFetchAndPull" },
+        { text: "gitea runner 安装", link: "/notes/src/others/giteaRunner" },
       ],
       "/notes/src/css": [
         { text: "CSS 中的 BFC", link: "/notes/src/css/bfc" },

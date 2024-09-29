@@ -1,0 +1,18 @@
+# docker-compose.yaml
+services:
+  runner:
+    image: gitea/act_runner:nightly
+    restart: unless-stopped
+    environment:
+      CONFIG_FILE: /config.yaml
+      GITEA_INSTANCE_URL: "https://localhost"
+      GITEA_RUNNER_REGISTRATION_TOKEN: "**这里填Token**"
+      GITEA_RUNNER_NAME: "docker_runner"
+      GITEA_RUNNER_LABEL: "ubuntu-latest" #去除的内容 // [!code --]
+    volumes:
+      - ~/software/docker/gitea-runner/data:/data
+      - ~/software/docker/gitea-runner/cache:/root/.cache
+      - /var/run/docker.sock:/var/run/docker.sock #添加的内容 // [!code ++:4]
+      - ~/software/docker/gitea-runner/config.yaml:/config.yaml
+    ports:
+      - 10000:10000
