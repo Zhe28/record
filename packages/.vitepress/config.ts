@@ -15,7 +15,7 @@ export default withMermaid({
   rewrites: {
     // "packages/notes/src/index.md": `/`,
   },
-  // 开启 clearUrls 功能，将 /notes/src/index.html 重写为 /notes/index.html
+  // 开启 clearUrls 功能，将 /notes/src/index.html 重写为 /notes/src/index
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
@@ -50,6 +50,11 @@ export default withMermaid({
         },
       ],
       "/notes/src/javascript": [
+        {
+          text: "设计模式",
+          collapsed: false,
+          items: [{ text: "单例模式", link: "/notes/src/javascript/patterns/singleton-parttern" }],
+        },
         { text: "并发模型和事件循环", link: "/notes/src/javascript/eventLoop" },
         { text: "防抖和节流", link: "/notes/src/javascript/debounceAndThrottle" },
         { text: "JS隐形类型转换", link: "/notes/src/javascript/implicitTypeConversion" },
