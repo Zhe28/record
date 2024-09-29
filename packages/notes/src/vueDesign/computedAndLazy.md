@@ -16,45 +16,44 @@ computed 实现过程： 内部嵌套一个effect函数。检测数据是否变�
 
 ![computed执行流程](./images/computed.png)
 
-
 ## 实现
+
 <<< ./code/computed.ts {3,6-37 typescript}
 
-这种有些许的 bug，在这种情况下，想实现在响应式变量变动之后重新执行 computed 的getter 
+这种有些许的 bug，在这种情况下，想实现在响应式变量变动之后重新执行 computed 的getter
 
 ```typescript
-const obj = computed(() => objProxy.ok)
+const obj = computed(() => objProxy.ok);
 
 // 特殊的 effect 嵌套
 effect(() => {
   console.log(obj.value);
-})
+});
 
-objProxy.ok = false
+objProxy.ok = false;
 ```
 
 很明显是办不到，因为 value 的依赖并未收集。无法触发响应式副作用的函数重新更改，因此要手动触发
 
 ```typescript
-function computed(getter:()=>any) {
-  let value : any
-  let dirty : boolean = true;
-  const effectFn = effect(getter,
-    {
-      lazy: true,
-      scheduler() {
-        trigger(obj, value) // [!code ++]
-        // 副作用函数重新执行后dirty值变脏
-        dirty = true;
-      }
-    })
+function computed(getter: () => any) {
+  let value: any;
+  let dirty: boolean = true;
+  const effectFn = effect(getter, {
+    lazy: true,
+    scheduler() {
+      trigger(obj, value); // [!code ++]
+      // 副作用函数重新执行后dirty值变脏
+      dirty = true;
+    }
+  });
   const obj = {
     get value() {
       if (dirty) {
         // 重新获取值，dirty取消脏值
-        dirty = false
+        dirty = false;
         value = effectFn();
-        track(obj, value) // [!code ++]
+        track(obj, value); // [!code ++]
       }
       return value;
     }
@@ -69,19 +68,21 @@ function computed(getter:()=>any) {
 
 ```typescript
 function effect(fn, options = { lazy: false }) {
-  const effectFn = () => {}
+  const effectFn = () => {};
   effectFn.options = options;
   effectFn.deps = [];
   // 懒执行返回副作用函数，其他直接执行函数
-  if (!options.lazy) {  // [!code ++]
-    effectFn()
+  if (!options.lazy) {
+    // [!code ++]
+    effectFn();
   } // [!code ++]
-  return effectFn;  // [!code ++]
+  return effectFn; // [!code ++]
 }
 ```
+
 ```typescript
 const effectFn = () => {
   // ...
-    return res; // [!code ++]
+  return res; // [!code ++]
 };
 ```

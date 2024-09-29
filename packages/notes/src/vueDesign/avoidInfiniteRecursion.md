@@ -3,6 +3,7 @@ title: 4.6 避免无限递归循环
 ---
 
 # 4.6 避免无限递归循环
+
 在执行以下代码时：会产生无限循环的情况
 
 ```javascript
@@ -24,14 +25,16 @@ effect(() => {
 ## 代码实现
 
 在trigger 中添加代码
+
 ```typescript
-function trigger(){
-//   other code.
+function trigger() {
+  //   other code.
   new Set(effects).forEach(effect => {
     // avoid maximum call stack size exceeded  // [!code ++]
-    if (effect !== activeEffect){  // [!code ++]
+    if (effect !== activeEffect) {
+      // [!code ++]
       effect(); // [!code ++]
     }
-  })
+  });
 }
 ```

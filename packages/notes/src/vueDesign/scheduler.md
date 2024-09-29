@@ -10,9 +10,7 @@ title: 4.7 调度执行
 
 借助 effectFn.options.scheduler 来 hook 函数执行的时间
 
-
-于是乎， effectFn 的结构样子变成了
-![effectFN](./images/effectFn.png)
+于是乎， effectFn 的结构样子变成了 ![effectFN](./images/effectFn.png)
 
 代码如下
 

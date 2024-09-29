@@ -21,7 +21,7 @@ effect(function () {
 
 当更改 objProxy.ok 时，由于副作用函数重新执行，结果就是
 
-``` log
+```log
 this is effecfFn1
 this is effecfFn1
 this is effecfFn2

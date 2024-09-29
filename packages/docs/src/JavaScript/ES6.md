@@ -353,7 +353,8 @@ Array.from({ length: 3 }); // [ undefined, undefined, undefined ]
 对于还没有部署该方法的浏览器，可以用 `Array.prototype.slice` 方法替代。
 
 ```js
-const toArray = (() => (Array.from ? Array.from : obj => [].slice.call(obj)))();
+const toArray = (() =>
+  Array.from ? Array.from : obj => [].slice.call(obj))();
 ```
 
 Array.from 还可以接受第二个参数，作用类似于数组的 map 方法，用来对每个元素进行处理，将处理后的值放入返回的数组。

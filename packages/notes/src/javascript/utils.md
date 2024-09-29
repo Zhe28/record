@@ -5,14 +5,18 @@ title: JavaScript 通用工具代码
 ## 网页大文件切片校验上传
 
 ```typescript
-function uploadFile(file: File, chunkSize: number, chunkCount: number) {
+function uploadFile(
+  file: File,
+  chunkSize: number,
+  chunkCount: number
+) {
   const chunks = createFileChunks(file, chunkSize);
   const promises = chunks.map((chunk, index) => {
     const formData = new FormData();
-    formData.append('file', chunk, `${file.name}.part${index + 1}`);
-    return fetch('http://example.com/upload', {
-      method: 'POST',
-      body: formData,
+    formData.append("file", chunk, `${file.name}.part${index + 1}`);
+    return fetch("http://example.com/upload", {
+      method: "POST",
+      body: formData
     });
   });
   return Promise.all(promises);
@@ -35,7 +39,7 @@ function createFileChunks(file: File, chunkSize: number): File[] {
 
 ```typescript
 function getFileExtension(filename: string): string {
-  return filename.split('.').pop() || '';
+  return filename.split(".").pop() || "";
 }
 ```
 
@@ -43,7 +47,7 @@ function getFileExtension(filename: string): string {
 
 ```typescript
 function getFileName(filename: string): string {
-  return filename.split('.').shift() || '';
+  return filename.split(".").shift() || "";
 }
 ```
 
@@ -51,7 +55,7 @@ function getFileName(filename: string): string {
 
 ```typescript
 function getFileType(filename: string): string {
-  return filename.split('.').pop() || '';
+  return filename.split(".").pop() || "";
 }
 ```
 
@@ -75,8 +79,7 @@ function getFileType(file: File): string {
 
 ```typescript
 function getFileLastModified(file: File): number {
-  return file
-    .lastModified
+  return file.lastModified
     ? file.lastModified * 1000
     : file.lastModifiedDate?.getTime() || 0;
 }
@@ -86,12 +89,12 @@ function getFileLastModified(file: File): number {
 
 ```typescript
 function deepClone(value, seen = new Set<any>()) {
-  if (typeof value !== 'object' || seen.has(value)) {
+  if (typeof value !== "object" || seen.has(value)) {
     return;
   }
   seen.add(value);
 
-  if (typeof value === 'object') {
+  if (typeof value === "object") {
     value = Object.assign({}, value);
   }
 
@@ -99,7 +102,7 @@ function deepClone(value, seen = new Set<any>()) {
     if (value.hasOwnProperty(key)) {
       const newValue = value[key];
 
-      if (typeof newValue === 'object') {
+      if (typeof newValue === "object") {
         value[key] = deepClone(newValue, seen);
       }
     }
