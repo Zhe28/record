@@ -92,6 +92,13 @@ export default withMermaid({
           items: [{ text: "5.3 代理 Object", link: "/notes/src/vueDesign/proxyObject" }],
         },
       ],
+      "/notes/src/Linux": [
+        {
+          text: "Linux 下的一些错误",
+          collapsed: true,
+          items: [{ text: "AppImage 命令行打开错误", link: "/notes/src/Linux/error/AppImage" }],
+        },
+      ],
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],

@@ -30,4 +30,7 @@ features:
   - title: 杂谈
     details: 这里是各种乱七八糟不知道怎么收录的地方
     link: ./others/HumanSystemOptimization
+  - title: linux
+    details: linux下的使用情况
+    link: ./Linux/error/AppImage
 ---
