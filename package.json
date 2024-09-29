@@ -11,7 +11,7 @@
     "dev": "vitepress dev packages",
     "build": "vitepress build packages",
     "docs:preview": "vitepress preview packages",
-    "prepare": "husky install",
+    "prepare": "husky .",
     "format": "prettier --write . --config ./.prettierrc",
     "posttest": "npm run format"
   },
