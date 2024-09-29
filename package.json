@@ -11,7 +11,7 @@
     "dev": "vitepress dev packages",
     "build": "vitepress build packages",
     "docs:preview": "vitepress preview packages",
-    "prepare": "husky .husky",
+    "prepare": "husky .",
     "format": "prettier --write . --config ./.prettierrc",
     "posttest": "npm run format"
   },
@@ -19,8 +19,8 @@
   "author": "",
   "license": "ISC",
   "lint-staged": {
-    "*.{ts,js,json,css,html,vue}": [
-      "prettier --write"
+    "*.{ts,js,json,css,html,vue,md}": [
+      "prettier --write --config ./.prettierrc"
     ]
   },
   "devDependencies": {
