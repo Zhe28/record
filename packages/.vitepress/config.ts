@@ -19,12 +19,14 @@ export default withMermaid({
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
+    // outline 中要显示的标题级别
     outline: "deep",
+    // 显示外部链接
     externalLinkIcon: true,
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "笔记", link: "/notes/src/" },
-      { text: "文档（入口未开放）", link: "" },
+      // { text: "文档（入口未开放）", link: "" },
     ],
 
     sidebar: {
@@ -114,7 +116,7 @@ export default withMermaid({
     plugins: [
       pagefindPlugin({
         customSearchQuery: chineseSearchOptimize,
-        resultOptimization: false,
+        // resultOptimization: false,
       }),
     ],
   },
