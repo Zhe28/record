@@ -54,7 +54,7 @@ export default withMermaid({
         {
           text: "设计模式",
           collapsed: false,
-          items: [{ text: "单例模式", link: "/notes/src/javascript/patterns/singleton-parttern" }],
+          items: [{ text: "单例模式", link: "/notes/src/javascript/patterns/singletonPattern" }],
         },
         { text: "并发模型和事件循环", link: "/notes/src/javascript/eventLoop" },
         { text: "防抖和节流", link: "/notes/src/javascript/debounceAndThrottle" },
