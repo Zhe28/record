@@ -12,7 +12,6 @@
     "build": "vitepress build packages",
     "docs:preview": "vitepress preview packages",
     "prepare": "husky .husky",
-    "vitepress-plugin-mermaid": "^2.0.17",
     "format": "prettier --write . --config ./.prettierrc",
     "posttest": "npm run format"
   },
@@ -30,6 +29,7 @@
     "less": "^4.2.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "vitepress": "^1.3.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
     "vitepress-plugin-pagefind": "^0.4.10",
     "lint-staged": "^15.2.10",
     "pagefind": "^1.1.1",
