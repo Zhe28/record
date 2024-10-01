@@ -1,21 +1,34 @@
 import Theme from "vitepress/theme";
 import "./index.less";
-import { watch } from "vue";
-import "@fancyapps/ui/dist/fancybox/fancybox.css"
-import { Fancybox } from "@fancyapps/ui";
+import { nextTick, onMounted, watch } from "vue";
+import mediumZoom from "medium-zoom/dist/medium-zoom";
+import { useRouter } from "vitepress";
+
+const initZoom = () => {
+  // 为所有图片增加缩放功能
+  mediumZoom(".main img", { background: "var(--vp-c-bg)" });
+};
 
 export default {
   ...Theme,
-  enhanceApp({ app, router, siteData }) {
-    // 添加图片缩放功能
-    Fancybox.bind("img")
-
-    watch(router.route, () => {
-      if (router.route.path === "/record/") {
-        router.go("/record/notes/src/");
-      } else if (router.route.path === "/") {
-        router.go("/notes/src/");
-      }
+  setup() {
+    onMounted(() => {
+      initZoom();
     });
+    const router = useRouter();
+    watch(
+      () => router.route.path,
+      () => nextTick(() => initZoom()).then(() => {}),
+    );
+  },
+  enhanceApp({ app, router, siteData }) {
+    watch(
+      () => router.route.path,
+      () => {
+        if (router.route.path === "/record/") {
+          router.go("/record/notes/src/");
+        }
+      },
+    );
   },
 };
