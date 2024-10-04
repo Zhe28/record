@@ -8,9 +8,9 @@
   ],
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev packages",
-    "build": "vitepress build packages",
-    "docs:preview": "vitepress preview packages",
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview .",
     "prepare": "husky .husky",
     "format": "prettier --write . --config ./.prettierrc",
     "posttest": "npm run format"
