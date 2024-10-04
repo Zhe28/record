@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 20.x
+          - latest
         bun-version:
           - latest
     steps:
@@ -34,10 +34,16 @@ jobs:
         run: bun i
       - name: Build page
         run: bun run build
-      - uses: actions/configure-pages@v4
+      - name: check the platform is gitea? .
+        run: | 
+          echo ${{toJSON(env)}}
+      - name: configure the page.
+        if: ${{ ! env.IS_GITEA }}
+        uses: actions/configure-pages@v4
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
+        if: ${{ ! env.IS_GITEA }}
       - name: Deploy page
         uses: actions/deploy-pages@v4
