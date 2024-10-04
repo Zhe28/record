@@ -17,20 +17,20 @@ hero:
 features:
   - title: 性能优化
     details: 前端性能优化相关内容
-    link: ./optimizePerformance/browseCache
+    link: /notes/src/optimizePerformance/browseCache
   - title: CSS
     details: CSS样式需要注意内容和收集一些样式
-    link: ./css/bfc
+    link: /notes/src/css/bfc
   - title: JavaScript
     details: 关于 JavaScript 的内容
-    link: ./javascript/eventLoop
+    link: /notes/src/javascript/eventLoop
   - title: Vue设计与实现
     details: Vue设计与实现笔记，代码仓库链接 https://github.com/Zhe28/vue-design
-    link: ./vueDesign/reactivitySystem
+    link: /notes/src/vueDesign/reactivitySystem
   - title: 杂谈
     details: 这里是各种乱七八糟不知道怎么收录的地方
-    link: ./others/HumanSystemOptimization
+    link: /notes/src/others/HumanSystemOptimization
   - title: linux
     details: linux下的使用情况
-    link: ./Linux/error/AppImage
+    link: /notes/src/Linux/error/AppImage
 ---

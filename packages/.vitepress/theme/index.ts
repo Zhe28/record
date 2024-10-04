@@ -21,14 +21,4 @@ export default {
       () => nextTick(() => initZoom()).then(() => {}),
     );
   },
-  enhanceApp({ app, router, siteData }) {
-    watch(
-      () => router.route.path,
-      () => {
-        if (router.route.path === "/record/") {
-          router.go("/record/notes/src/");
-        }
-      },
-    );
-  },
 };
