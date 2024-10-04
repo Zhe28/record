@@ -1,11 +1,11 @@
 export const webSidebar = () => {
-  const notePackage = "/packages/notes/src/web";
-  const optimizePerformance = notePackage + "/optimize-performance";
-  const javascript = notePackage + "/javascript";
-  const javascriptPatterns = notePackage + "/javascript" + "/patterns";
-  const javascriptWebpack = notePackage + "/javascript" + "/webpack";
-  const javascriptUtils = notePackage + "/javascript" + "/utils";
-  const javascriptProtocol = notePackage + "/javascript" + "/protocol";
+  const web = "/packages/notes/src/web";
+  const protocol = web + "/protocol";
+  const optimizePerformance = web + "/optimize-performance";
+  const javascript = web + "/javascript";
+  const javascriptPatterns = web + "/javascript" + "/patterns";
+  const javascriptWebpack = web + "/javascript" + "/webpack";
+  const javascriptUtils = web + "/javascript" + "/utils";
 
   return [
     {
@@ -31,10 +31,10 @@ export const webSidebar = () => {
       text: "CSS",
       collapsed: true,
       items: [
-        { text: "Flexbox 布局", link: `${notePackage}/css/flexbox` },
-        { text: "CSS 中的 BFC", link: `${notePackage}/css/bfc` },
-        { text: "内联布局和块状布局", link: `${notePackage}/css/block-inline` },
-        { text: "选择器", link: `${notePackage}/css/selector` },
+        { text: "Flexbox 布局", link: `${web}/css/flexbox` },
+        { text: "CSS 中的 BFC", link: `${web}/css/bfc` },
+        { text: "内联布局和块状布局", link: `${web}/css/block-inline` },
+        { text: "选择器", link: `${web}/css/selector` },
       ],
     },
     {
@@ -64,7 +64,7 @@ export const webSidebar = () => {
     {
       text: "网络协议",
       collapsed: true,
-      items: [{ text: "websocket", link: `${javascriptProtocol}/websocket` }],
+      items: [{ text: "websocket", link: `${protocol}/websocket` }],
     },
   ];
 };
