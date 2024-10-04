@@ -9,28 +9,24 @@ hero:
   actions:
     - theme: brand
       text: 开始开车喽，出发
-      link: ./javascript/eventLoop
+      link: /packages/notes/src/web/javascript/ES6
     - theme: alt
       text: 座位暂时未安排好
-#      link: /api-examples
 
 features:
-  - title: 性能优化
-    details: 前端性能优化相关内容
-    link: /notes/src/optimizePerformance/browseCache
-  - title: CSS
-    details: CSS样式需要注意内容和收集一些样式
-    link: /notes/src/css/bfc
-  - title: JavaScript
-    details: 关于 JavaScript 的内容
-    link: /notes/src/javascript/eventLoop
+  - title: WEB 前端
+    details: 前端相关内容
+    link: /packages/notes/src/web/optimize-performance/browse-cache
   - title: Vue设计与实现
     details: Vue设计与实现笔记，代码仓库链接 https://github.com/Zhe28/vue-design
-    link: /notes/src/vueDesign/reactivitySystem
+    link: /packages/notes/src/vue-design/chapter4/reactivity-system
   - title: 杂谈
     details: 这里是各种乱七八糟不知道怎么收录的地方
-    link: /notes/src/others/HumanSystemOptimization
+    link: /packages/notes/src/others/human-system-optimization
+  - title: 软件安装过程
+    details: 一些软件的安装过程记录
+    link: /packages/notes/src/process/gitea-runner
   - title: linux
     details: linux下的使用情况
-    link: /notes/src/Linux/error/AppImage
+    link: /packages/notes/src/linux/error/appImage
 ---
