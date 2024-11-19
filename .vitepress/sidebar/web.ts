@@ -27,7 +27,7 @@ export const webSidebar = () => {
         },
         { text: "浏览器缓存", link: `${optimizePerformance}/browse-cache` },
         { text: "减少网页卡顿", link: `${optimizePerformance}/task` },
-        { text: "事件代理/事件委托", link: `${optimizePerformance}/event-delegation` },
+        { text: "事件代理/事件委托", link: `${javascript}/event-delegation` },
       ],
     },
     {
