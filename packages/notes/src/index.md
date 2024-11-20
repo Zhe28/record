@@ -23,9 +23,6 @@ features:
   - title: 杂谈
     details: 这里是各种乱七八糟不知道怎么收录的地方
     link: /packages/notes/src/others/human-system-optimization
-  - title: 软件安装过程
-    details: 一些软件的安装过程记录
-    link: /packages/notes/src/process/gitea-runner
   - title: linux
     details: linux下的使用情况
     link: /packages/notes/src/linux/error/appImage

@@ -3,8 +3,12 @@ export const linuxSidebar = () => {
 
   return [
     {
-      text: "fcitx 输入法安装",
-      link: `${notePackage}/fcitx5`,
+      text: "软件安装过程",
+      collapsed: false,
+      items: [
+        { text: "gitea runner 安装", link: `${notePackage}/installation-process/gitea-runner` },
+        { text: "fcitx5 安装", link: `${notePackage}/installation-process/fcitx5` },
+      ],
     },
     {
       text: "linux 下的一些错误",
