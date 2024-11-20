@@ -35,56 +35,6 @@ function createFileChunks(file: File, chunkSize: number): File[] {
 }
 ```
 
-## 获取文件后缀名
-
-```typescript
-function getFileExtension(filename: string): string {
-  return filename.split(".").pop() || "";
-}
-```
-
-## 获取文件名
-
-```typescript
-function getFileName(filename: string): string {
-  return filename.split(".").shift() || "";
-}
-```
-
-## 获取文件类型
-
-```typescript
-function getFileType(filename: string): string {
-  return filename.split(".").pop() || "";
-}
-```
-
-## 获取文件大小
-
-```typescript
-function getFileSize(file: File): number {
-  return file.size;
-}
-```
-
-## 获取文件类型
-
-```typescript
-function getFileType(file: File): string {
-  return file.type;
-}
-```
-
-## 获取文件最后修改时间
-
-```typescript
-function getFileLastModified(file: File): number {
-  return file.lastModified
-    ? file.lastModified * 1000
-    : file.lastModifiedDate?.getTime() || 0;
-}
-```
-
 ## 代码深拷贝
 
 ```typescript
