@@ -70,12 +70,6 @@ ul.appendChild(newLi);
 
 可以通过判断 event.target 的标签类型来判断被点击的是不是 li 标签，然后判断其父元素是否是 ul 来判断其是不是 ul 下的第一层 li 标签。
 
-html
-
-代码解读
-
-复制代码
-
 ```js
 <ul>
      <li>1</li>
