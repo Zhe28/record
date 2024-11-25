@@ -1,5 +1,3 @@
-import { link } from "fs";
-
 export const webSidebar = () => {
   const web = "/packages/notes/src/web";
   const protocol = web + "/protocol";
@@ -8,6 +6,7 @@ export const webSidebar = () => {
   const javascriptPatterns = web + "/javascript" + "/patterns";
   const javascriptWebpack = web + "/javascript" + "/webpack";
   const javascriptUtils = web + "/javascript" + "/utils";
+  const javascriptAccumulation = web + "/javascript" + "/accumulation";
 
   return [
     {
@@ -68,6 +67,16 @@ export const webSidebar = () => {
       text: "网络协议",
       collapsed: true,
       items: [{ text: "websocket", link: `${protocol}/websocket` }],
+    },
+    {
+      text: "用户登录",
+      collapsed: true,
+      items: [
+        {
+          text: "Token 认证",
+          link: `${javascriptAccumulation}/token`,
+        },
+      ],
     },
   ];
 };
