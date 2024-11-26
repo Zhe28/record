@@ -78,5 +78,15 @@ export const webSidebar = () => {
         },
       ],
     },
+    {
+      text: "按钮级权限控制",
+      collapsed: true,
+      items: [
+        {
+          text: "Vue 组件按钮级权限控制",
+          link: `${javascriptAccumulation}/view-permission`,
+        },
+      ],
+    },
   ];
 };
