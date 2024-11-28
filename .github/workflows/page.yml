@@ -44,12 +44,10 @@ jobs:
             echo "GITHUB"
           fi
       - name: configure the page.
-        if: ${{ ! secrets.IS_GITEA }}
         uses: actions/configure-pages@v4
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: packages/notes/.vitepress/dist
-        if: ${{ ! secrets.IS_GITEA }}
       - name: Deploy page
         uses: actions/deploy-pages@v4
