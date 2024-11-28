@@ -13,6 +13,8 @@ jobs:
       pages: write
       id-token: write
     runs-on: ubuntu-latest
+    env:
+      IS_GITEA: ${{ secrets.IS_GITEA }}
     strategy:
       matrix:
         node-version:
@@ -36,18 +38,18 @@ jobs:
         run: bun run build
       - name: Check platform
         run: |
-          if [ "$IS_GITEA" = "true" ]; then
+          if [ "${{ secrets.IS_GITEA }}" = "true" ]; then
             echo "hello gitea"
           else
             echo "GITHUB"
           fi
       - name: configure the page.
-        if: ${{ ! env.IS_GITEA }}
+        if: ${{ ! secrets.IS_GITEA }}
         uses: actions/configure-pages@v4
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: packages/notes/.vitepress/dist
-        if: ${{ ! env.IS_GITEA }}
+        if: ${{ ! secrets.IS_GITEA }}
       - name: Deploy page
         uses: actions/deploy-pages@v4
