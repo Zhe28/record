@@ -1,7 +1,7 @@
 import { DefaultTheme } from "vitepress";
 
 export const accumulationSidebar = (): DefaultTheme.SidebarItem[] => {
-  const notePackage = "/packages/notes/src/accumulation/";
+  const notePackage = "/accumulation";
 
   return [
     {

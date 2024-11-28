@@ -20,11 +20,8 @@ export default async () =>
     lang: "zh-cn",
     description: "记录自己笔记的地方",
     head: [["link", { rel: "icon", href: base + "/learning.svg" }]],
-    rewrites: {
-      // "packages/notes/src/index.md": `/`,
-      "packages/notes/src/:page": ":page",
-    },
-    // 开启 clearUrls 功能，将 /notes/src/index.html 重写为 /notes/src/index
+    srcDir: "./src",
+    // 开启 clearUrls 功能
     cleanUrls: true,
     lastUpdated: true,
     themeConfig: {
@@ -33,18 +30,15 @@ export default async () =>
       // 显示外部链接
       externalLinkIcon: true,
       // https://vitepress.dev/reference/default-theme-config
-      nav: [
-        { text: "笔记", link: "/" },
-        // { text: "文档（入口未开放）", link: "" },
-      ],
+      nav: [{ text: "笔记", link: "/" }],
 
       sidebar: {
-        "packages/notes/src/web": webSidebar(),
-        "/packages/notes/src/others": othersSidebar(),
-        "/packages/notes/src/vue-design": vueDesignSidebar(),
-        "/packages/notes/src/linux": linuxSidebar(),
-        "/packages/notes/src/process": processSidebar(),
-        "/packages/notes/src/accumulation": accumulationSidebar(),
+        "/web": webSidebar(),
+        "/others": othersSidebar(),
+        "/vue-design": vueDesignSidebar(),
+        "/linux": linuxSidebar(),
+        "/process": processSidebar(),
+        "/accumulation": accumulationSidebar(),
       },
 
       socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
@@ -52,13 +46,11 @@ export default async () =>
     markdown: {
       config: (md) => {
         md.use(tasklist);
-        // .use(excalidraw);
       },
       image: {
         lazyLoading: true,
       },
     },
-    // outDir: "../../../dist/notes",
     vite: {
       build: {
         target: "esnext",
@@ -69,7 +61,6 @@ export default async () =>
       plugins: [
         pagefindPlugin({
           customSearchQuery: chineseSearchOptimize,
-          // resultOptimization: false,
         }),
       ],
     },

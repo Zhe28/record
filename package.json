@@ -1,15 +1,15 @@
 {
   "name": "record",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "这是我记录自己东西的地方，自己的学习内容。",
   "workspaces": [
     "packages/notes"
   ],
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev .",
-    "build": "vitepress build .",
-    "preview": "vitepress preview .",
+    "dev": "vitepress dev ./packages/notes",
+    "build": "vitepress build ./packages/notes",
+    "preview": "vitepress preview ./packages/notes",
     "prepare": "husky .husky",
     "format": "prettier --write . --config ./.prettierrc",
     "posttest": "npm run format"

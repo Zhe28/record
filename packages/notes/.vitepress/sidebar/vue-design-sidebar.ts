@@ -1,5 +1,5 @@
 export const vueDesignSidebar = () => {
-  const notePackage = "/packages/notes/src/vue-design";
+  const notePackage = "/vue-design";
   const chapter4 = notePackage + "/chapter4";
   const chapter5 = notePackage + "/chapter5";
 

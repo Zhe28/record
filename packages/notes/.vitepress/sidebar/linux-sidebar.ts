@@ -1,5 +1,5 @@
 export const linuxSidebar = () => {
-  const notePackage = "/packages/notes/src/linux";
+  const notePackage = "/linux";
 
   return [
     {

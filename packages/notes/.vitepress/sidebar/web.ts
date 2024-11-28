@@ -1,5 +1,5 @@
 export const webSidebar = () => {
-  const web = "/packages/notes/src/web";
+  const web = "/web";
   const protocol = web + "/protocol";
   const optimizePerformance = web + "/optimize-performance";
   const javascript = web + "/javascript";
@@ -17,7 +17,6 @@ export const webSidebar = () => {
           link: `${javascript}/ES6`,
         },
         { text: "并发模型和事件循环", link: `${javascript}/event-loop` },
-
         { text: "JS隐形类型转换", link: `${javascript}/implicit-type-conversion` },
         {
           text: "提升前端构建工具的性能",

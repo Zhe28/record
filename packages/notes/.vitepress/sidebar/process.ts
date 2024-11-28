@@ -1,5 +1,5 @@
 export const processSidebar = () => {
-  const notePackage = "/packages/notes/src/process";
+  const notePackage = "/process";
 
   return [];
 };
