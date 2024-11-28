@@ -34,9 +34,13 @@ jobs:
         run: bun i
       - name: Build page
         run: bun run build
-      - name: check the platform is gitea? .
-        run: | 
-          echo ${{toJSON(env)}}
+      - name: Check platform
+        run: |
+          if [ "$IS_GITEA" = "true" ]; then
+            echo "hello gitea"
+          else
+            echo "GITHUB"
+          fi
       - name: configure the page.
         if: ${{ ! env.IS_GITEA }}
         uses: actions/configure-pages@v4
