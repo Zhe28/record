@@ -12,5 +12,9 @@ export const accumulationSidebar = (): DefaultTheme.SidebarItem[] => {
       text: "权限控制",
       link: `${notePackage}/view-permission`,
     },
+    {
+      text: "阿里云OSS",
+      link: `${notePackage}/ali-oss`,
+    },
   ];
 };
