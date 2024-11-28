@@ -7,6 +7,8 @@ import { othersSidebar } from "./sidebar/others";
 import { vueDesignSidebar } from "./sidebar/vue-design-sidebar";
 import { linuxSidebar } from "./sidebar/linux-sidebar";
 import { processSidebar } from "./sidebar/process";
+import { defineConfig } from "vitepress";
+import { accumulationSidebar } from "./sidebar/accumulation";
 
 const base = `/${_base}/`;
 
@@ -42,6 +44,7 @@ export default async () =>
         "/packages/notes/src/vue-design": vueDesignSidebar(),
         "/packages/notes/src/linux": linuxSidebar(),
         "/packages/notes/src/process": processSidebar(),
+        "/packages/notes/src/accumulation": accumulationSidebar(),
       },
 
       socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],

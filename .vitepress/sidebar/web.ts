@@ -6,7 +6,6 @@ export const webSidebar = () => {
   const javascriptPatterns = web + "/javascript" + "/patterns";
   const javascriptWebpack = web + "/javascript" + "/webpack";
   const javascriptUtils = web + "/javascript" + "/utils";
-  const javascriptAccumulation = web + "/javascript" + "/accumulation";
 
   return [
     {
@@ -67,26 +66,6 @@ export const webSidebar = () => {
       text: "网络协议",
       collapsed: true,
       items: [{ text: "websocket", link: `${protocol}/websocket` }],
-    },
-    {
-      text: "用户登录",
-      collapsed: true,
-      items: [
-        {
-          text: "Token 认证",
-          link: `${javascriptAccumulation}/token`,
-        },
-      ],
-    },
-    {
-      text: "按钮级权限控制",
-      collapsed: true,
-      items: [
-        {
-          text: "Vue 组件按钮级权限控制",
-          link: `${javascriptAccumulation}/view-permission`,
-        },
-      ],
     },
   ];
 };

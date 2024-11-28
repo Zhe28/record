@@ -26,4 +26,7 @@ features:
   - title: linux
     details: linux下的使用情况
     link: /packages/notes/src/linux/error/appImage
+  - title: 一些积累
+    #    details: 一些经历
+    link: /packages/notes/src/accumulation/token
 ---
