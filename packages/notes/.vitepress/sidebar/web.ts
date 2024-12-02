@@ -40,7 +40,10 @@ export const webSidebar = () => {
     {
       text: "设计模式",
       collapsed: true,
-      items: [{ text: "单例模式", link: `${javascriptPatterns}/singleton-pattern` }],
+      items: [
+        { text: "单例模式", link: `${javascriptPatterns}/singleton-pattern` },
+        { text: "观察者模式", link: `${javascriptPatterns}/observer-pattern` },
+      ],
     },
     {
       text: "Webpack",
