@@ -17,59 +17,7 @@
 
 ## 代码实现
 
-```javascript
-// 观察者
-class Observer {
-  constructor(name) {
-    this.name = name;
-  }
-
-  update(message) {
-    console.log(`${this.name} 收到消息: ${message}`);
-  }
-}
-
-// 目标/被观察者
-class Subject {
-  constructor() {
-    this.observers = new Set();
-  }
-
-  // 添加观察者
-  attach(observer) {
-    this.observers.add(observer);
-  }
-
-  // 移除观察者
-  detach(observer) {
-    this.observers.delete(observer);
-  }
-
-  // 通知所有观察者
-  notify(message) {
-    this.observers.forEach(observer => observer.update(message));
-  }
-}
-
-// 使用示例
-const subject = new Subject();
-
-const observer1 = new Observer("观察者1");
-const observer2 = new Observer("观察者2");
-
-subject.attach(observer1);
-subject.attach(observer2);
-
-subject.notify("Hello World!");
-// 输出:
-// 观察者1 收到消息: Hello World!
-// 观察者2 收到消息: Hello World!
-
-subject.detach(observer2);
-subject.notify("Hello Again!");
-// 输出:
-// 观察者1 收到消息: Hello Again!
-```
+<<< ./code/observer-pattern.ts
 
 ## 实际应用场景
 
@@ -147,3 +95,11 @@ notify(message) {
   });
 }
 ```
+
+## 示例内容
+
+<script setup>
+import ObserverPattern from "./code/observer-pattern.vue";
+</script>
+
+<ObserverPattern />
