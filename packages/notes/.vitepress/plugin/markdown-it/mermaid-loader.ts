@@ -1,44 +1,37 @@
-// import MarkdownIt, { type StateCore } from "markdown-it";
-// import mermaid from "mermaid";
-//
-// let fence
-// export function markdownItMermaid(markdownIt: MarkdownIt) {
-//   mermaid.initialize({ startOnLoad: false });
-//   fence = markdownIt.renderer.rules.fence;
-//   markdownIt.core.ruler.push("mermaid", mermaidRuler);
-//   // markdownIt.renderer.rules.fence = _mermaidRuler
-// }
-//
-// async function mermaidRuler(state: StateCore) {
-//   for (const token of state.tokens) {
-//     console.log(token);
-//     const index = state.tokens.indexOf(token);
-//     if (token.type === "fence" && token.info === "mermaid") {
-//
-//       console.log(token);
-//       token.tag = "pre";
-//       token.type = "html_inline";
-//       token.attrSet("class", "mermaid");
-//       console.log(token);
-//     }
-//   }
-// }
-//
-// const _mermaidRuler = (tokens, idx, options, env, self) => {
-//   const token = tokens[idx];
-//   console.log(token);
-//   if (tokens[idx].info === "mermaid") {
-//     token.tag = "pre";
-//     token.type = "text";
-//     token.attrSet("class", "mermaid");
-//   }
-//
-//   return fence(tokens, idx, options, env, self);
-// };
-//
-// // const resolveMermaidFence = (token, idx, options, env, renderer) => {
-// //   if (token[idx].info === "mermaid") {
-// //     console.log(token[idx]);
-// //   }
-// //   return token[idx];
-// // };
+import MarkdownIt from "markdown-it";
+import mermaid from "mermaid"; //
+/**
+ * 初始化 mermaid 配置
+ */
+function initMermaid() {
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "default",
+    securityLevel: "loose",
+    // 更多配置项...
+  });
+
+  return mermaid;
+}
+
+/**
+ * Markdown-it mermaid 插件, 用来解析 mermaid 语法
+ * @param md {MarkdownIt} markdown-it
+ */
+export function mermaidPlugin(md: MarkdownIt) {
+  const fence = md.renderer.rules.fence;
+  const text = md.renderer.rules.code_block;
+
+  md.renderer.rules.fence = (tokens, idx, options, env, self) => {
+    // 检查是否为 mermaid 代码块
+    if (tokens[idx].info === "mermaid") {
+      const content = tokens[idx].content;
+
+      // 为 mermaid 代码块添加 class
+      tokens[idx].attrSet("class", "mermaid");
+      return text!(tokens, idx, options, env, self);
+    }
+
+    return fence!(tokens, idx, options, env, self);
+  };
+}

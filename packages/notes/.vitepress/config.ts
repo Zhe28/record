@@ -1,6 +1,5 @@
 import { tasklist } from "@mdit/plugin-tasklist";
 import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
-import { withMermaid } from "vitepress-plugin-mermaid";
 import { name as _base } from "../package.json";
 import { webSidebar } from "./sidebar/web";
 import { othersSidebar } from "./sidebar/others";
@@ -9,12 +8,13 @@ import { linuxSidebar } from "./sidebar/linux-sidebar";
 import { processSidebar } from "./sidebar/process";
 import { defineConfig } from "vitepress";
 import { accumulationSidebar } from "./sidebar/accumulation";
+import { mermaidPlugin } from "./plugin/markdown-it/mermaid-loader";
 
 const base = `/${_base}/`;
 
 // https://vitepress.dev/reference/site-config
 export default async () =>
-  withMermaid({
+  defineConfig({
     base,
     title: "我的笔记",
     lang: "zh-cn",
@@ -45,7 +45,9 @@ export default async () =>
     },
     markdown: {
       config: (md) => {
+        // markdown-it tasklist插件
         md.use(tasklist);
+        md.use(mermaidPlugin);
       },
       image: {
         lazyLoading: true,
