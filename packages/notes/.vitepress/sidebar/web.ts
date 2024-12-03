@@ -43,6 +43,7 @@ export const webSidebar = () => {
       items: [
         { text: "单例模式", link: `${javascriptPatterns}/singleton-pattern` },
         { text: "观察者模式", link: `${javascriptPatterns}/observer-pattern` },
+        { text: "工厂模式", link: `${javascriptPatterns}/factory-pattern` },
       ],
     },
     {
