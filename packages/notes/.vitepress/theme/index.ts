@@ -1,5 +1,6 @@
 import Theme from "vitepress/theme";
 import "./index.less";
+import "./tailwindcss.css";
 import { nextTick, onMounted, watch } from "vue";
 import mediumZoom from "medium-zoom/dist/medium-zoom";
 import { useRouter } from "vitepress";
