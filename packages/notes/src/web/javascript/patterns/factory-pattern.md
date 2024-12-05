@@ -71,6 +71,8 @@ dangerButton.render(); // 输出：渲染危险按钮
 
 在这个例子中，`ButtonFactory` 根据传入的类型创建不同样式的按钮，这样使用者就不需要关心按钮是如何被创建的，只需要知道使用哪种类型的按钮即可。
 
+## 工厂模式的示例
+
 <script setup>
   import FactoryPattern from "./code/factory-pattern.vue";
 </script>

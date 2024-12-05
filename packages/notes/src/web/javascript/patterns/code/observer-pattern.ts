@@ -17,7 +17,7 @@ const logs = ref<ILog[]>([]);
  * @description 一个简单的观察者
  *  */
 class Observer {
-  constructor(private name: string) {}
+  constructor(public name: string) {}
   /**
    * 给观察者发送消息
    * @param message {string}
@@ -36,7 +36,7 @@ class Observer {
  * 订阅者
  * 订阅者有三个方法
  * 1. 订阅 attach(observer: Observer)
- * 2. 取消订阅 deattach(observer: Observer)
+ * 2. 取消订阅 detach(observer: Observer)
  * 3. 通知观察者消息 notify(message: string)
  *
  * @class Subject
@@ -58,7 +58,7 @@ class Subject {
    * @param observer {Observer}
    * @returns {void}
    */
-  deattach(observer: Observer): void {
+  detach(observer: Observer): void {
     this.observers.delete(observer);
   }
   /**
