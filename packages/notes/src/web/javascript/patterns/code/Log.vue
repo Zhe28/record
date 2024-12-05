@@ -9,15 +9,15 @@ const props = defineProps({
   },
 });
 
-const logContainer = useTemplateRef<HTMLElement>("logContainer");
+const logContent = useTemplateRef<HTMLElement>("logContent");
 
 // 监听 logs 变化，自动滚动到底部
 watch(
   () => props.logs,
   () => {
     setTimeout(() => {
-      if (logContainer.value) {
-        logContainer.value.scrollTop = logContainer.value.scrollHeight;
+      if (logContent.value) {
+        logContent.value.scrollTop = logContent.value.scrollHeight;
       }
     }, 0);
   },
@@ -26,21 +26,21 @@ watch(
 </script>
 
 <template>
-  <div
-    class="log-container"
-    ref="logContainer"
-  >
+  <div class="log-container">
     <div class="log-header">
       <i class="fas fa-terminal"></i>
       日志输出
     </div>
-    <div class="log-content">
+    <div
+      class="log-content"
+      ref="logContent"
+    >
       <div
         v-for="log in logs"
         :key="log.date"
         class="log-item"
       >
-        <span class="log-timestamp">[{{ dayjs(log.date).format("HH:mm:ss") }}]</span>
+        <span class="log-timestamp">[{{ log.date }}]</span>
         <span class="log-type">[{{ log.name }}]</span>
         <span class="log-message">{{ log.message }}</span>
       </div>
