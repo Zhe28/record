@@ -16,5 +16,9 @@ export const accumulationSidebar = (): DefaultTheme.SidebarItem[] => {
       text: "阿里云OSS",
       link: `${notePackage}/ali-oss`,
     },
+    {
+      text: "微信扫码登录",
+      link: `${notePackage}/wechat-qr-login`,
+    },
   ];
 };
