@@ -139,7 +139,6 @@ import CssVisibilityEventDemo from './components/CssVisibilityEventDemo.vue'
 
 export default {
   components: {
-    CssVisibilityDemo,
     CssVisibilityEventDemo
   }
 }
