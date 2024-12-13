@@ -35,6 +35,7 @@ export const webSidebar = () => {
         { text: "CSS 中的 BFC", link: `${web}/css/bfc` },
         { text: "内联布局和块状布局", link: `${web}/css/block-inline` },
         { text: "选择器", link: `${web}/css/selector` },
+        { text: "隐藏元素的三种方式", link: `${web}/css/css-visibility` },
       ],
     },
     {
