@@ -1,11 +1,12 @@
 import Theme from "vitepress/theme";
 import "./index.less";
 import "./tailwindcss.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { nextTick, onMounted, watch } from "vue";
 import mediumZoom from "medium-zoom/dist/medium-zoom";
 import { useRouter } from "vitepress";
 import mermaid from "mermaid";
-
+import Log from "../../src/web/javascript/patterns/code/Log.vue";
 const initZoom = () => {
   // 为所有图片增加缩放功能
   mediumZoom(".main img", { background: "var(--vp-c-bg)" });
@@ -36,6 +37,9 @@ const initMermaid = async () => {
 
 export default {
   ...Theme,
+  enhanceApp({ app }) {
+    app.component("Log", Log);
+  },
   setup() {
     onMounted(async () => {
       initZoom();

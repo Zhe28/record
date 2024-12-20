@@ -144,7 +144,8 @@ const permission: ObjectDirective = {
 <script setup>
 import Permission from "./code/Permission.vue"
 </script>
-
+<ClientOnly>
 <Permission></Permission>
+</ClientOnly>
 
 通过自定义指令和 Vuex 的结合，我们可以在 Vue 项目中实现灵活的按钮级权限控制。这样可以确保只有特定角色的用户才能看到和操作特定的按钮。

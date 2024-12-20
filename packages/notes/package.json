@@ -35,11 +35,12 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "vitepress": "^1.5.0",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@types/markdown-it": "^14.1.2",
-    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "autoprefixer": "^10.4.13"
+    "tailwindcss": "^3.3.0",
+    "vitepress": "^1.5.0"
   },
   "postcss": {
     "plugins": {

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { watch, useTemplateRef } from "vue";
-import dayjs from "dayjs";
+import { watch, useTemplateRef, ref } from "vue";
 
 const props = defineProps({
   logs: {
@@ -23,6 +22,10 @@ watch(
   },
   { deep: true },
 );
+
+const clearLogs = () => {
+  props.logs.length = 0;
+};
 </script>
 
 <template>
@@ -30,6 +33,13 @@ watch(
     <div class="log-header">
       <i class="fas fa-terminal"></i>
       日志输出
+      <div
+        class="clear-button"
+        @click="clearLogs"
+        title="清除所有日志"
+      >
+        <i class="fas fa-trash"></i>
+      </div>
     </div>
     <div
       class="log-content"
@@ -40,7 +50,7 @@ watch(
         :key="log.date"
         class="log-item"
       >
-        <span class="log-timestamp">[{{ log.date }}]</span>
+        <span class="log-timestamp">[{{ log.date ?? new Date().toLocaleTimeString() }}]</span>
         <span class="log-type">[{{ log.name }}]</span>
         <span class="log-message">{{ log.message }}</span>
       </div>
@@ -50,81 +60,88 @@ watch(
 
 <style scoped>
 .log-container {
-  border: 1px solid #eaeaea;
-  border-radius: 6px;
-  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 300px;
+  background: #f8f9fa;
 }
 
 .log-header {
-  background: #f8f9fa;
-  padding: 12px 16px;
-  font-weight: 600;
-  color: #2c3e50;
-  border-bottom: 1px solid #eaeaea;
+  padding: 8px 12px;
+  background: #e9ecef;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 8px;
+  position: relative;
+}
+
+.log-header i {
+  margin-right: 8px;
+}
+
+.clear-button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.clear-button:hover {
+  color: #dc3545;
 }
 
 .log-content {
-  flex: 1;
+  padding: 8px;
+  max-height: 300px;
   overflow-y: auto;
-  padding: 12px;
-  font-family: "Fira Code", monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  background: #1e1e1e;
-  color: #d4d4d4;
-}
-
-.log-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.log-content::-webkit-scrollbar-track {
-  background: #2d2d2d;
-}
-
-.log-content::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 4px;
-}
-
-.log-content::-webkit-scrollbar-thumb:hover {
-  background: #666;
+  font-family: monospace;
 }
 
 .log-item {
-  margin-bottom: 4px;
-  white-space: pre-wrap;
-  word-break: break-all;
+  padding: 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .log-timestamp {
-  color: #569cd6;
-  margin-right: 6px;
+  color: #666;
+  margin-right: 8px;
 }
 
 .log-type {
-  color: #4ec9b0;
-  margin-right: 6px;
+  color: #0066cc;
+  margin-right: 8px;
 }
 
 .log-message {
-  color: #ce9178;
+  color: #333;
 }
 
-@media (max-width: 600px) {
-  .log-container {
-    height: 200px;
-  }
+/* 滚动条样式 */
+.log-content::-webkit-scrollbar {
+  width: 6px;
+}
 
-  .log-content {
-    font-size: 12px;
-  }
+.log-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.log-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.log-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
 </style>

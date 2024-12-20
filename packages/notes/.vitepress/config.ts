@@ -19,7 +19,7 @@ export default async () =>
     title: "我的笔记",
     lang: "zh-cn",
     description: "记录自己笔记的地方",
-    head: [["link", { rel: "icon", href: base + "/learning.svg" }]],
+    head: [["link", { rel: "icon", href: base + "learning.svg" }]],
     srcDir: "./src",
     // 开启 clearUrls 功能
     cleanUrls: true,

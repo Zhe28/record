@@ -18,6 +18,7 @@ export const webSidebar = () => {
         },
         { text: "并发模型和事件循环", link: `${javascript}/event-loop` },
         { text: "JS隐形类型转换", link: `${javascript}/implicit-type-conversion` },
+        { text: "Input 事件", link: `${javascript}/input-event` },
         {
           text: "提升前端构建工具的性能",
           link: `${optimizePerformance}/performance-improvements`,

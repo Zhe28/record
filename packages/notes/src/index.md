@@ -16,7 +16,7 @@ hero:
 features:
   - title: WEB 前端
     details: 前端相关内容
-    link: /web/optimize-performance/browse-cache
+    link: /web/javascript/ES6
   - title: Vue设计与实现
     details: Vue设计与实现笔记，代码仓库链接 https://github.com/Zhe28/vue-design
     link: /vue-design/chapter4/reactivity-system
