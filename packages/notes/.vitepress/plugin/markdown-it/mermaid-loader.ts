@@ -1,18 +1,4 @@
 import MarkdownIt from "markdown-it";
-import mermaid from "mermaid"; //
-/**
- * 初始化 mermaid 配置
- */
-function initMermaid() {
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: "default",
-    securityLevel: "loose",
-    // 更多配置项...
-  });
-
-  return mermaid;
-}
 
 /**
  * Markdown-it mermaid 插件, 用来解析 mermaid 语法

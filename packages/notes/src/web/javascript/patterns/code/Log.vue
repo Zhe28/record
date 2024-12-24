@@ -52,7 +52,9 @@ const clearLogs = () => {
       >
         <span class="log-timestamp">[{{ log.date ?? new Date().toLocaleTimeString() }}]</span>
         <span class="log-type">[{{ log.name }}]</span>
-        <span class="log-message">{{ log.message }}</span>
+        <span class="log-message">{{
+          typeof log.message === "function" ? log.message() : log.message
+        }}</span>
       </div>
     </div>
   </div>
