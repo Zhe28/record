@@ -8,13 +8,16 @@ import { useRouter } from "vitepress";
 import mermaid from "mermaid";
 import Log from "../../src/web/javascript/patterns/code/Log.vue";
 
+// mermaid 渲染缓存
+const renderCache = new Map();
+
+// 为图片增加缩放功能
 const initZoom = () => {
-  // 为所有图片增加缩放功能
   mediumZoom(".main img", { background: "var(--vp-c-bg)" });
 };
 
+// 初始化 mermaid 配置
 const initMermaid = async () => {
-  // 初始化 mermaid 配置
   mermaid.initialize({
     startOnLoad: false,
     theme: "base",
@@ -48,11 +51,20 @@ async function renderMermaid(element: Element, index: number) {
 
   //  检查完成， 开始渲染 mermaid 图表
   try {
-    const content = mermaidCodeChild.textContent || "";
-    const { svg } = await mermaid.render(`mermaid-${index}`, content);
-    element.innerHTML = svg;
+    // 获取文本节点内容
+    const content = mermaidCodeChild.textContent!;
+    // 如果已经渲染过，就不再渲染
+    if (renderCache.has(content)) {
+      element.innerHTML = renderCache.get(content)!;
+    }
+    mermaid.render(`mermaid-${index}`, content).then((result) => {
+      element.innerHTML = result.svg;
+      // 将生成的 SVG 添加到渲染缓存中
+      renderCache.set(content, result.svg);
+    });
   } catch (error) {
-    console.error("Mermaid 渲染失败:", error);
+    // 渲染失败，异常处理
+    console.warn("Mermaid 渲染失败:", error);
     element.innerHTML = `<pre>${element.textContent}</pre>`;
   }
 }
@@ -75,7 +87,7 @@ export default {
 
       // 监听 body 子元素节点的变化， body 变化之后重新初始化 mermaid
       // 解决了 当变更元素文档时， mermaid 图表不重新渲染的问题
-      const observer = new MutationObserver(debounce(render, 200));
+      const observer = new MutationObserver(debounce(render, 1000));
       observer.observe(document.body, {
         subtree: true,
         childList: true,
@@ -86,8 +98,8 @@ export default {
     watch(
       () => router.route.path,
       async () => {
-        await nextTick();
         initZoom();
+        render();
       },
     );
   },
