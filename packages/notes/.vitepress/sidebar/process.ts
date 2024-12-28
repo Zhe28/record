@@ -1,4 +1,5 @@
-export const processSidebar = () => {
+import { DefaultTheme } from "vitepress";
+export const processSidebar = (): DefaultTheme.SidebarItem[] => {
   const notePackage = "/process";
 
   return [];

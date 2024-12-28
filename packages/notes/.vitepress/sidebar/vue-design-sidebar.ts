@@ -1,4 +1,6 @@
-export const vueDesignSidebar = () => {
+import { DefaultTheme } from "vitepress";
+
+export const vueDesignSidebar = (): DefaultTheme.SidebarItem[] => {
   const notePackage = "/vue-design";
   const chapter4 = notePackage + "/chapter4";
   const chapter5 = notePackage + "/chapter5";

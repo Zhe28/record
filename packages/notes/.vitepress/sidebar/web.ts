@@ -1,7 +1,9 @@
-export const webSidebar = () => {
+import { DefaultTheme } from "vitepress";
+
+export const webSidebar = (): DefaultTheme.SidebarItem[] => {
   const web = "/web";
   const protocol = web + "/protocol";
-  const optimizePerformance = web + "/optimize-performance";
+  const optimizePerformance = web + "/enhance-performance";
   const javascript = web + "/javascript";
   const javascriptPatterns = web + "/javascript" + "/patterns";
   const javascriptWebpack = web + "/javascript" + "/webpack";
@@ -19,11 +21,6 @@ export const webSidebar = () => {
         { text: "并发模型和事件循环", link: `${javascript}/event-loop` },
         { text: "JS隐形类型转换", link: `${javascript}/implicit-type-conversion` },
         { text: "Input 事件", link: `${javascript}/input-event` },
-        {
-          text: "提升前端构建工具的性能",
-          link: `${optimizePerformance}/performance-improvements`,
-        },
-        { text: "浏览器缓存", link: `${optimizePerformance}/browse-cache` },
         { text: "减少网页卡顿", link: `${optimizePerformance}/task` },
         { text: "事件代理/事件委托", link: `${javascript}/event-delegation` },
       ],
@@ -48,6 +45,14 @@ export const webSidebar = () => {
         { text: "工厂模式", link: `${javascriptPatterns}/factory-pattern` },
         { text: "装饰器模式", link: `${javascriptPatterns}/decorator-pattern` },
         { text: "模块模式", link: `${javascriptPatterns}/module-pattern` },
+      ],
+    },
+    {
+      text: "Web 性能优化",
+      collapsed: true,
+      items: [
+        { text: "Web 缓存", link: `${optimizePerformance}/browse-cache` },
+        { text: "减少网页卡顿", link: `${optimizePerformance}/task` },
       ],
     },
     {

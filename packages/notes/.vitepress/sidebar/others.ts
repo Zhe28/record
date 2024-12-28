@@ -1,4 +1,6 @@
-export const othersSidebar = () => {
+import { DefaultTheme } from "vitepress";
+
+export const othersSidebar = (): DefaultTheme.SidebarItem[] => {
   const notePackage = "/others";
 
   return [

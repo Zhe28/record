@@ -1,4 +1,6 @@
-export const linuxSidebar = () => {
+import { DefaultTheme } from "vitepress";
+
+export const linuxSidebar = (): DefaultTheme.SidebarItem[] => {
   const notePackage = "/linux";
 
   return [
