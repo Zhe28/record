@@ -1,5 +1,3 @@
-import { tasklist } from "@mdit/plugin-tasklist";
-import { chineseSearchOptimize, pagefindPlugin } from "vitepress-plugin-pagefind";
 import { name as _base } from "../package.json";
 import { webSidebar } from "./sidebar/web";
 import { othersSidebar } from "./sidebar/others";
@@ -8,7 +6,8 @@ import { linuxSidebar } from "./sidebar/linux-sidebar";
 import { processSidebar } from "./sidebar/process";
 import { defineConfig } from "vitepress";
 import { accumulationSidebar } from "./sidebar/accumulation";
-import { mermaidPlugin } from "./plugin/markdown-it/mermaid-loader";
+import { viteConfig } from "./vite.config";
+import { markdownItConfig } from "./markdown-it-config";
 
 const base = `/${_base}/`;
 
@@ -30,7 +29,14 @@ export default async () =>
       // 显示外部链接
       externalLinkIcon: true,
       // https://vitepress.dev/reference/default-theme-config
-      nav: [{ text: "笔记", link: "/" }],
+      nav: [
+        // { text: "笔记", link: "/" },
+        { text: "Web 前端", link: "/web/javascript/ES6" },
+        { text: "Vue设计与实现", link: "/vue-design/chapter4/reactivity-system" },
+        { text: "Linux", link: "/linux/installation-process/gitea-runner" },
+        { text: "杂谈", link: "/others/human-system-optimization" },
+        { text: "积累", link: "/accumulation/token" },
+      ],
 
       sidebar: {
         "/web": webSidebar(),
@@ -43,29 +49,8 @@ export default async () =>
 
       socialLinks: [{ icon: "github", link: "https://github.com/Zhe28" }],
     },
-    markdown: {
-      config: (md) => {
-        // markdown-it tasklist插件
-        md.use(tasklist);
-        md.use(mermaidPlugin);
-      },
-      image: {
-        lazyLoading: true,
-      },
-    },
-    vite: {
-      build: {
-        target: "esnext",
-        emptyOutDir: true,
-        chunkSizeWarningLimit: 40960000,
-        assetsInlineLimit: 40960000,
-      },
-      plugins: [
-        pagefindPlugin({
-          customSearchQuery: chineseSearchOptimize,
-        }),
-      ],
-    },
+    markdown: markdownItConfig,
+    vite: viteConfig,
     sitemap: {
       hostname: "https://zhe28.github.io/record/",
     },
