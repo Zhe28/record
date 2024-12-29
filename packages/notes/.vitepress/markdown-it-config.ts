@@ -9,9 +9,10 @@ const _UserConfig: UserConfig<DefaultTheme.Config> = {
       md.use(tasklist);
       md.use(mermaidPlugin);
     },
-    image: {
-      lazyLoading: true,
-    },
+    // 已经默认使用了， 不需要重复配置
+    // image: {
+    //   lazyLoading: true,
+    // },
   },
 };
 export const markdownItConfig = _UserConfig.markdown;
